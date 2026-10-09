@@ -1,0 +1,21 @@
+{
+ "fit": {
+  "verdict": "make",
+  "adaptation": "",
+  "missing_equipment": [],
+  "reason": "You already have an espresso machine and fridge to brew the coffee and chill the ingredients, and a blender can handle the whipping part.",
+  "overlaps": [
+   "Pistachio latte",
+   "Iced Spanish latte"
+  ]
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 1280,
+   "retry": false
+  }
+ ]
+}

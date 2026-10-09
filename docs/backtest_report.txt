@@ -1,0 +1,57 @@
+Lead Time backtest, snapshot to 2026-10-03
+Constants: BASELINE_WEEKS=12 TAKEOFF_RATIO=3.0 SUSTAIN=(3, 4) MIN_BASELINE=2 MIN_TAKEOFF_VALUE=10 SMOOTH_WEEKS=3 BASELINE_GAP_WEEKS=0 MIN_CASES=4
+
+concept                    from  origin wk   flagged     window then              SG actual   outcome        miss  warn
+-----------------------------------------------------------------------------------------------------------------------
+dubai-chocolate            MY    2024-05-19  2024-06-22  2024-06-02..2025-03-23   2024-06-09  already_here             
+dubai-chewy-cookie         KR    2025-12-14  2026-01-17  2026-01-04..2027-02-28   2026-01-18  inside            0     0
+tanghulu                   MY    2023-09-17  2023-10-21  -                        2023-10-08  already_here             
+salt-bread                 MY    2025-03-23  2025-04-26  -                        2024-04-14  already_here             
+yakgwa                     JP    2023-07-30  2023-09-02  -                        2025-11-30  no_forecast              
+maritozzo                  US    2022-06-19  2022-07-23  -                        2021-12-26  already_here             
+crookie                    US    2024-03-03  2024-04-06  -                        2024-03-10  already_here             
+new-york-roll              TW    2023-12-03  2024-01-06  -                        2023-12-03  already_here             
+croissant-cube             AE    2023-01-08  2023-02-11  -                        -           no_forecast              
+sea-salt-coffee            US    2026-03-29  2026-05-02  2026-04-19..2027-06-06   -           pending                  
+fruit-sando                US    2022-03-06  2022-04-09  -                        -           no_forecast              
+souffle-pancake            KR    2022-07-03  2022-08-06  -                        2023-04-02  no_forecast              
+einspanner                 US    2022-07-17  2022-08-20  -                        2023-09-17  no_forecast              
+cream-cheese-garlic-bread  US    2023-11-19  2023-12-23  -                        -           no_forecast              
+bomboloni                  TW    2023-08-13  2023-09-16  -                        2022-06-26  already_here             
+yogurt-ice-cream           KR    2024-06-02  2024-07-06  2024-06-16..2025-04-06   2025-08-17  late             19    58
+flat-croissant             US    2022-01-30  2022-03-05  -                        -           no_forecast              
+croissant-taiyaki          KR    2025-03-16  2025-04-19  2025-04-06..2025-12-14   -           never_arrived            
+dubai-strawberry-cup       US    2024-11-24  2024-12-28  2024-12-15..2025-08-24   -           never_arrived            
+spanish-latte              TW    2024-03-31  2024-05-04  -                        2023-07-16  already_here             
+brookie                    KR    2022-07-24  2022-08-27  -                        -           no_forecast              
+
+Flagged abroad: 21  Forecasts judged: 4  Inside window: 1
+Median miss (weeks, judged forecasts): 9.5  Median warning before SG takeoff (weeks): 58
+Outcomes: inside=1, early=0, late=1, never_arrived=2, already_here=8, no_forecast=8, pending=1
+
+Leave-one-out (ignores time order; checks whether lags generalise):
+  dubai-chocolate             actual lag   3 wk   window from others 5-63 wk                 missed by 2 wk
+  dubai-chewy-cookie          actual lag   5 wk   window from others 3-63 wk                 inside
+  tanghulu                    actual lag   3 wk   window from others 5-63 wk                 missed by 2 wk
+  yakgwa                      actual lag 122 wk   window from others 3-39 wk                 missed by 83 wk
+  crookie                     actual lag   1 wk   window from others 4-62 wk                 missed by 3 wk
+  souffle-pancake             actual lag  39 wk   window from others 3-63 wk                 inside
+  einspanner                  actual lag  61 wk   window from others 3-51 wk                 missed by 10 wk
+  yogurt-ice-cream            actual lag  63 wk   window from others 3-39 wk                 missed by 24 wk
+  2 of 8 inside; median miss 2.5 weeks
+
+Late entry (already in Singapore: is it still worth joining? rewound to the day SG takeoff was confirmed):
+  dubai-chocolate             2024-07-13   4 wk in  call=go_late  actual: 67 wk left    right
+  dubai-chewy-cookie          2026-02-21   4 wk in  call=go_late  actual: 31 wk left    right
+  tanghulu                    2023-11-11   4 wk in  call=go_late  actual: 50 wk left    right
+  salt-bread                  2024-05-18   4 wk in  call=skip     actual: 4 wk left     right
+  yakgwa                      2026-01-03   4 wk in  call=skip     actual: 1 wk left     right
+  maritozzo                   2022-01-29   4 wk in  call=skip     actual: 3 wk left     right
+  crookie                     2024-04-13   4 wk in  call=skip     actual: 3 wk left     right
+  new-york-roll               2024-01-06   4 wk in  call=go_late  actual: 7 wk left     right
+  souffle-pancake             2023-05-06   4 wk in  call=skip     actual: 9 wk left     wrong
+  einspanner                  2023-10-21   4 wk in  call=skip     actual: 1 wk left     right
+  bomboloni                   2022-07-30   4 wk in  call=skip     actual: 7 wk left     wrong
+  yogurt-ice-cream            2025-09-20   4 wk in  call=skip     actual: 4 wk left     right
+  spanish-latte               2023-08-19   4 wk in  call=skip     actual: 2 wk left     right
+  11 of 13 calls right

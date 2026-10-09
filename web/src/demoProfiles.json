@@ -1,0 +1,62 @@
+[
+  {
+    "id": "dessert-cafe",
+    "label": "Dessert café",
+    "blurb": "Cakes, bakes and coffee in an HDB estate",
+    "profile": {
+      "name": "Block 216 Dessert Café",
+      "sells": [
+        "dessert",
+        "bakery",
+        "drink"
+      ],
+      "equipment": [
+        "oven",
+        "stovetop",
+        "mixer",
+        "fridge",
+        "freezer",
+        "blender",
+        "espresso machine",
+        "moulds"
+      ],
+      "price_band": "mid",
+      "menu": [
+        "Pistachio latte",
+        "Chocolate lava cake",
+        "Burnt cheesecake",
+        "Matcha roll cake",
+        "Butter croissant",
+        "Iced Spanish latte",
+        "Kaya toast set"
+      ]
+    }
+  },
+  {
+    "id": "drinks-stall",
+    "label": "Hawker drinks stall",
+    "blurb": "Kopi, teh and blended drinks at a food centre",
+    "profile": {
+      "name": "Ah Seng Drinks Stall",
+      "sells": [
+        "drink"
+      ],
+      "equipment": [
+        "stovetop",
+        "blender",
+        "fridge",
+        "freezer"
+      ],
+      "price_band": "budget",
+      "menu": [
+        "Kopi",
+        "Teh tarik",
+        "Milo dinosaur",
+        "Bandung",
+        "Sugarcane juice",
+        "Iced lemon tea",
+        "Avocado shake"
+      ]
+    }
+  }
+]

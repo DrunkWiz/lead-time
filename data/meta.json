@@ -1,0 +1,132 @@
+{
+ "fetched_at": "2026-10-05T14:42:36+00:00",
+ "built_at": "2026-10-05T20:11:43+00:00",
+ "sources": [
+  "Google Trends (weekly, via pytrends)"
+ ],
+ "regions": [
+  "SG",
+  "AE",
+  "JP",
+  "KR",
+  "MY",
+  "TW",
+  "US"
+ ],
+ "timeframe": "today 5-y",
+ "terms": {
+  "dubai-chocolate": [
+   "dubai chocolate",
+   "두바이 초콜릿",
+   "ドバイチョコ",
+   "杜拜巧克力",
+   "شوكولاتة دبي"
+  ],
+  "dubai-chewy-cookie": [
+   "dubai chewy cookie",
+   "두바이 쫀득쿠키",
+   "두쫀쿠"
+  ],
+  "tanghulu": [
+   "tanghulu",
+   "탕후루",
+   "タンフル"
+  ],
+  "salt-bread": [
+   "salt bread",
+   "소금빵",
+   "塩パン",
+   "鹽可頌"
+  ],
+  "yakgwa": [
+   "yakgwa",
+   "약과"
+  ],
+  "maritozzo": [
+   "maritozzo",
+   "マリトッツォ",
+   "마리토쪼"
+  ],
+  "crookie": [
+   "crookie",
+   "크루키"
+  ],
+  "new-york-roll": [
+   "new york roll",
+   "supreme croissant",
+   "cromboloni",
+   "뉴욕롤"
+  ],
+  "croissant-cube": [
+   "cube croissant",
+   "croissant cube",
+   "큐브 크루아상"
+  ],
+  "sea-salt-coffee": [
+   "sea salt coffee",
+   "cà phê muối",
+   "소금커피"
+  ],
+  "mochi-donut": [
+   "mochi donut",
+   "모찌도넛",
+   "麻糬甜甜圈"
+  ],
+  "fruit-sando": [
+   "fruit sando",
+   "フルーツサンド",
+   "과일 샌드위치"
+  ],
+  "souffle-pancake": [
+   "souffle pancake",
+   "スフレパンケーキ",
+   "수플레 팬케이크"
+  ],
+  "einspanner": [
+   "einspanner",
+   "아인슈페너"
+  ],
+  "cream-cheese-garlic-bread": [
+   "korean garlic bread",
+   "cream cheese garlic bread",
+   "육쪽마늘빵"
+  ],
+  "bomboloni": [
+   "bomboloni",
+   "봄볼로니"
+  ],
+  "yogurt-ice-cream": [
+   "yogurt ice cream bowl",
+   "yoajung",
+   "요거트 아이스크림",
+   "요아정"
+  ],
+  "flat-croissant": [
+   "flat croissant",
+   "crushed croissant",
+   "크룽지",
+   "납작 크루아상"
+  ],
+  "croissant-taiyaki": [
+   "croissant taiyaki",
+   "クロワッサンたい焼き",
+   "크로와상 붕어빵"
+  ],
+  "dubai-strawberry-cup": [
+   "dubai strawberry cup",
+   "dubai chocolate strawberry",
+   "두바이 딸기"
+  ],
+  "spanish-latte": [
+   "spanish latte",
+   "سبانش لاتيه",
+   "스패니시 라떼"
+  ],
+  "brookie": [
+   "brookie",
+   "brownie cookie",
+   "브루키"
+  ]
+ },
+ "raw_files": 154
+}

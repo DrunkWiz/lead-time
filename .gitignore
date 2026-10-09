@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+node_modules/
+web/dist/
+.vercel/
+data/fetch_log.txt
+data/cache/fit/_test*
+data/fetch_log2.txt

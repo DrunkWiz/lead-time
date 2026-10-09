@@ -1,0 +1,658 @@
+{
+  "_note": "Seed concepts, hand-written and hand-reviewed (no model key was available for scripts/cluster_concepts.py when this was made). Runtime never re-clusters. Native-name aliases that measure an established local product rather than the trend were removed (tanghulu zh, einspanner zh, sea-salt-coffee zh); see docs/DECISIONS.md.",
+  "concepts": [
+    {
+      "id": "dubai-chocolate",
+      "name": "Dubai chocolate",
+      "aliases": {
+        "en": [
+          "dubai chocolate"
+        ],
+        "ko": [
+          "두바이 초콜릿"
+        ],
+        "ja": [
+          "ドバイチョコ"
+        ],
+        "zh": [
+          "杜拜巧克力"
+        ],
+        "ar": [
+          "شوكولاتة دبي"
+        ]
+      },
+      "description": "Thick chocolate bar filled with pistachio cream and toasted kataifi pastry.",
+      "category": "dessert",
+      "key_ingredients": [
+        "pistachio cream",
+        "kataifi",
+        "chocolate"
+      ],
+      "techniques": [
+        "tempering",
+        "toasting"
+      ],
+      "equipment": [
+        "moulds",
+        "stovetop",
+        "fridge"
+      ]
+    },
+    {
+      "id": "dubai-chewy-cookie",
+      "name": "Dubai chewy cookie",
+      "aliases": {
+        "en": [
+          "dubai chewy cookie"
+        ],
+        "ko": [
+          "두바이 쫀득쿠키",
+          "두쫀쿠"
+        ]
+      },
+      "description": "Marshmallow-cocoa mochi shell wrapped around pistachio kataifi filling.",
+      "category": "dessert",
+      "key_ingredients": [
+        "marshmallow",
+        "cocoa",
+        "pistachio cream",
+        "kataifi"
+      ],
+      "techniques": [
+        "melting",
+        "toasting",
+        "shaping"
+      ],
+      "equipment": [
+        "stovetop",
+        "fridge"
+      ]
+    },
+    {
+      "id": "tanghulu",
+      "name": "Tanghulu",
+      "aliases": {
+        "en": [
+          "tanghulu"
+        ],
+        "ko": [
+          "탕후루"
+        ],
+        "ja": [
+          "タンフル"
+        ]
+      },
+      "description": "Fresh fruit on skewers coated in a thin, glassy sugar shell.",
+      "category": "dessert",
+      "key_ingredients": [
+        "strawberries",
+        "grapes",
+        "sugar"
+      ],
+      "techniques": [
+        "hard-crack sugar"
+      ],
+      "equipment": [
+        "stovetop"
+      ]
+    },
+    {
+      "id": "salt-bread",
+      "name": "Korean salt bread",
+      "aliases": {
+        "en": [
+          "salt bread"
+        ],
+        "ko": [
+          "소금빵"
+        ],
+        "ja": [
+          "塩パン"
+        ],
+        "zh": [
+          "鹽可頌"
+        ]
+      },
+      "description": "Buttery rolled bread with a crisp salted base and a hollow butter pocket.",
+      "category": "bakery",
+      "key_ingredients": [
+        "butter",
+        "flour",
+        "sea salt flakes"
+      ],
+      "techniques": [
+        "laminating",
+        "proofing",
+        "baking"
+      ],
+      "equipment": [
+        "oven",
+        "mixer"
+      ]
+    },
+    {
+      "id": "yakgwa",
+      "name": "Yakgwa",
+      "aliases": {
+        "en": [
+          "yakgwa"
+        ],
+        "ko": [
+          "약과"
+        ]
+      },
+      "description": "Korean honey-ginger cookie, fried then soaked in syrup; now used as a topping.",
+      "category": "dessert",
+      "key_ingredients": [
+        "honey",
+        "sesame oil",
+        "ginger",
+        "flour"
+      ],
+      "techniques": [
+        "deep frying",
+        "syrup soaking"
+      ],
+      "equipment": [
+        "fryer",
+        "stovetop"
+      ]
+    },
+    {
+      "id": "maritozzo",
+      "name": "Maritozzo",
+      "aliases": {
+        "en": [
+          "maritozzo"
+        ],
+        "ja": [
+          "マリトッツォ"
+        ],
+        "ko": [
+          "마리토쪼"
+        ]
+      },
+      "description": "Soft brioche bun split and overfilled with whipped cream.",
+      "category": "bakery",
+      "key_ingredients": [
+        "brioche dough",
+        "whipping cream"
+      ],
+      "techniques": [
+        "proofing",
+        "baking",
+        "whipping"
+      ],
+      "equipment": [
+        "oven",
+        "mixer",
+        "fridge"
+      ]
+    },
+    {
+      "id": "crookie",
+      "name": "Crookie",
+      "aliases": {
+        "en": [
+          "crookie"
+        ],
+        "ko": [
+          "크루키"
+        ]
+      },
+      "description": "Croissant stuffed and topped with cookie dough, baked again.",
+      "category": "bakery",
+      "key_ingredients": [
+        "croissants",
+        "cookie dough",
+        "chocolate chips"
+      ],
+      "techniques": [
+        "baking"
+      ],
+      "equipment": [
+        "oven"
+      ]
+    },
+    {
+      "id": "new-york-roll",
+      "name": "New York roll",
+      "aliases": {
+        "en": [
+          "new york roll",
+          "supreme croissant",
+          "cromboloni"
+        ],
+        "ko": [
+          "뉴욕롤"
+        ]
+      },
+      "description": "Round laminated croissant filled with pastry cream and glazed on top.",
+      "category": "bakery",
+      "key_ingredients": [
+        "croissant dough",
+        "pastry cream",
+        "chocolate glaze"
+      ],
+      "techniques": [
+        "laminating",
+        "baking",
+        "piping"
+      ],
+      "equipment": [
+        "oven",
+        "mixer",
+        "stovetop"
+      ]
+    },
+    {
+      "id": "croissant-cube",
+      "name": "Cube croissant",
+      "aliases": {
+        "en": [
+          "cube croissant",
+          "croissant cube"
+        ],
+        "ko": [
+          "큐브 크루아상"
+        ]
+      },
+      "description": "Croissant dough baked in a square mould, filled and glazed.",
+      "category": "bakery",
+      "key_ingredients": [
+        "croissant dough",
+        "pastry cream"
+      ],
+      "techniques": [
+        "laminating",
+        "baking",
+        "piping"
+      ],
+      "equipment": [
+        "oven",
+        "moulds",
+        "mixer"
+      ]
+    },
+    {
+      "id": "sea-salt-coffee",
+      "name": "Sea salt coffee",
+      "aliases": {
+        "en": [
+          "sea salt coffee"
+        ],
+        "vi": [
+          "cà phê muối"
+        ],
+        "ko": [
+          "소금커피"
+        ]
+      },
+      "description": "Vietnamese strong coffee topped with salted, lightly sweet milk foam.",
+      "category": "drink",
+      "key_ingredients": [
+        "robusta coffee",
+        "condensed milk",
+        "cream",
+        "salt"
+      ],
+      "techniques": [
+        "brewing",
+        "whipping"
+      ],
+      "equipment": [
+        "espresso machine",
+        "fridge"
+      ]
+    },
+    {
+      "id": "mochi-donut",
+      "name": "Mochi donut",
+      "aliases": {
+        "en": [
+          "mochi donut"
+        ],
+        "ko": [
+          "모찌도넛"
+        ],
+        "zh": [
+          "麻糬甜甜圈"
+        ]
+      },
+      "description": "Ring of chewy glutinous-rice dough balls, fried and glazed.",
+      "category": "dessert",
+      "key_ingredients": [
+        "glutinous rice flour",
+        "tapioca starch",
+        "glaze"
+      ],
+      "techniques": [
+        "deep frying",
+        "glazing"
+      ],
+      "equipment": [
+        "fryer"
+      ]
+    },
+    {
+      "id": "fruit-sando",
+      "name": "Fruit sando",
+      "aliases": {
+        "en": [
+          "fruit sando"
+        ],
+        "ja": [
+          "フルーツサンド"
+        ],
+        "ko": [
+          "과일 샌드위치"
+        ]
+      },
+      "description": "Soft milk bread with whipped cream and whole fruit, cut to show a cross-section.",
+      "category": "dessert",
+      "key_ingredients": [
+        "milk bread",
+        "whipping cream",
+        "strawberries",
+        "kiwi"
+      ],
+      "techniques": [
+        "whipping",
+        "assembling"
+      ],
+      "equipment": [
+        "mixer",
+        "fridge"
+      ]
+    },
+    {
+      "id": "souffle-pancake",
+      "name": "Soufflé pancake",
+      "aliases": {
+        "en": [
+          "souffle pancake"
+        ],
+        "ja": [
+          "スフレパンケーキ"
+        ],
+        "ko": [
+          "수플레 팬케이크"
+        ]
+      },
+      "description": "Tall, wobbly Japanese pancakes made from whipped egg-white batter.",
+      "category": "dessert",
+      "key_ingredients": [
+        "eggs",
+        "flour",
+        "milk"
+      ],
+      "techniques": [
+        "meringue",
+        "low-heat cooking"
+      ],
+      "equipment": [
+        "griddle",
+        "mixer"
+      ]
+    },
+    {
+      "id": "einspanner",
+      "name": "Einspänner",
+      "aliases": {
+        "en": [
+          "einspanner"
+        ],
+        "ko": [
+          "아인슈페너"
+        ]
+      },
+      "description": "Strong black coffee under a thick layer of sweet cold cream.",
+      "category": "drink",
+      "key_ingredients": [
+        "espresso",
+        "whipping cream",
+        "sugar"
+      ],
+      "techniques": [
+        "brewing",
+        "whipping"
+      ],
+      "equipment": [
+        "espresso machine",
+        "mixer",
+        "fridge"
+      ]
+    },
+    {
+      "id": "cream-cheese-garlic-bread",
+      "name": "Korean cream cheese garlic bread",
+      "aliases": {
+        "en": [
+          "korean garlic bread",
+          "cream cheese garlic bread"
+        ],
+        "ko": [
+          "육쪽마늘빵"
+        ]
+      },
+      "description": "Round bun cut into wedges, stuffed with sweet cream cheese and soaked in garlic butter.",
+      "category": "bakery",
+      "key_ingredients": [
+        "buns",
+        "cream cheese",
+        "garlic",
+        "butter"
+      ],
+      "techniques": [
+        "baking",
+        "piping"
+      ],
+      "equipment": [
+        "oven"
+      ]
+    },
+    {
+      "id": "bomboloni",
+      "name": "Bomboloni",
+      "aliases": {
+        "en": [
+          "bomboloni"
+        ],
+        "ko": [
+          "봄볼로니"
+        ]
+      },
+      "description": "Italian filled doughnut, fried and piped with cream or jam.",
+      "category": "dessert",
+      "key_ingredients": [
+        "enriched dough",
+        "pastry cream",
+        "sugar"
+      ],
+      "techniques": [
+        "proofing",
+        "deep frying",
+        "piping"
+      ],
+      "equipment": [
+        "fryer",
+        "mixer",
+        "stovetop"
+      ]
+    },
+    {
+      "id": "yogurt-ice-cream",
+      "name": "Korean yogurt ice cream",
+      "aliases": {
+        "en": [
+          "yogurt ice cream bowl",
+          "yoajung"
+        ],
+        "ko": [
+          "요거트 아이스크림",
+          "요아정"
+        ]
+      },
+      "description": "Soft frozen yogurt piled high with honeycomb, fruit and crunchy toppings.",
+      "category": "dessert",
+      "key_ingredients": [
+        "greek yogurt",
+        "honeycomb",
+        "fresh fruit",
+        "granola"
+      ],
+      "techniques": [
+        "churning",
+        "assembling"
+      ],
+      "equipment": [
+        "freezer",
+        "soft-serve machine"
+      ]
+    },
+    {
+      "id": "flat-croissant",
+      "name": "Flat croissant",
+      "aliases": {
+        "en": [
+          "flat croissant",
+          "crushed croissant"
+        ],
+        "ko": [
+          "크룽지",
+          "납작 크루아상"
+        ]
+      },
+      "description": "Croissant pressed flat and caramelised until it shatters like a wafer.",
+      "category": "bakery",
+      "key_ingredients": [
+        "croissants",
+        "sugar",
+        "chocolate"
+      ],
+      "techniques": [
+        "pressing",
+        "caramelising"
+      ],
+      "equipment": [
+        "griddle"
+      ]
+    },
+    {
+      "id": "croissant-taiyaki",
+      "name": "Croissant taiyaki",
+      "aliases": {
+        "en": [
+          "croissant taiyaki"
+        ],
+        "ja": [
+          "クロワッサンたい焼き"
+        ],
+        "ko": [
+          "크로와상 붕어빵"
+        ]
+      },
+      "description": "Fish-shaped pastry made from croissant dough, filled with red bean or custard.",
+      "category": "bakery",
+      "key_ingredients": [
+        "croissant dough",
+        "red bean paste",
+        "custard"
+      ],
+      "techniques": [
+        "pressing",
+        "baking"
+      ],
+      "equipment": [
+        "moulds",
+        "stovetop"
+      ]
+    },
+    {
+      "id": "dubai-strawberry-cup",
+      "name": "Dubai strawberry cup",
+      "aliases": {
+        "en": [
+          "dubai strawberry cup",
+          "dubai chocolate strawberry"
+        ],
+        "ko": [
+          "두바이 딸기"
+        ]
+      },
+      "description": "Cup of fresh strawberries layered with pistachio kunafa and melted chocolate.",
+      "category": "dessert",
+      "key_ingredients": [
+        "strawberries",
+        "pistachio cream",
+        "kataifi",
+        "chocolate"
+      ],
+      "techniques": [
+        "toasting",
+        "melting",
+        "assembling"
+      ],
+      "equipment": [
+        "stovetop",
+        "fridge"
+      ]
+    },
+    {
+      "id": "spanish-latte",
+      "name": "Spanish latte",
+      "aliases": {
+        "en": [
+          "spanish latte"
+        ],
+        "ar": [
+          "سبانش لاتيه"
+        ],
+        "ko": [
+          "스패니시 라떼"
+        ]
+      },
+      "description": "Espresso with milk sweetened by condensed milk, usually iced.",
+      "category": "drink",
+      "key_ingredients": [
+        "espresso",
+        "condensed milk",
+        "milk"
+      ],
+      "techniques": [
+        "brewing"
+      ],
+      "equipment": [
+        "espresso machine",
+        "fridge"
+      ]
+    },
+    {
+      "id": "brookie",
+      "name": "Brookie",
+      "aliases": {
+        "en": [
+          "brookie",
+          "brownie cookie"
+        ],
+        "ko": [
+          "브루키"
+        ]
+      },
+      "description": "Half brownie, half chocolate-chip cookie, baked together in one tray.",
+      "category": "bakery",
+      "key_ingredients": [
+        "chocolate",
+        "butter",
+        "flour",
+        "chocolate chips"
+      ],
+      "techniques": [
+        "baking"
+      ],
+      "equipment": [
+        "oven"
+      ]
+    }
+  ]
+}

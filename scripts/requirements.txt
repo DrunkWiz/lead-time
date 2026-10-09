@@ -1,0 +1,3 @@
+# Script-only dependencies. The runtime (leadtime/, api/) is standard library only.
+pytrends==4.9.2
+requests>=2.31
