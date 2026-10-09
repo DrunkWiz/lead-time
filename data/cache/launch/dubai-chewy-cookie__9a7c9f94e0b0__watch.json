@@ -1,0 +1,53 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Pistachio Kataifi Filling",
+    "steps": [
+     "Toast shredded pastry until golden and crisp.",
+     "Mix toasted pastry with rich pistachio cream.",
+     "Chill mixture to firm up for shaping."
+    ]
+   },
+   {
+    "component": "Marshmallow-Cocoa Shell",
+    "steps": [
+     "Melt marshmallow base with cocoa powder on stovetop.",
+     "Stir until smooth and glossy.",
+     "Dip chilled filling balls into the warm mixture."
+    ]
+   },
+   {
+    "component": "Assembly & Setting",
+    "steps": [
+     "Place coated items on a lined tray.",
+     "Refrigerate until the shell sets firm.",
+     "Serve chilled for best texture."
+    ]
+   }
+  ],
+  "swaps": [
+   {
+    "original": "baked cookie",
+    "use": "chilled set shell",
+    "why": "Oven not available; fridge sets marshmallow coating effectively"
+   }
+  ],
+  "hooks": [
+   "Chewy outside, crunchy inside.",
+   "Pistachio dream in every bite.",
+   "Sweet treat for your Kopi break."
+  ],
+  "caption": "New on the menu! Our Dubai-style chewy cookie brings that satisfying crunch and chew. A marshmallow-cocoa shell wraps around sweet pistachio kataifi. Perfect with your Teh Tarik or Milo. Come try it today at Ah Seng Drinks Stall! #SingaporeFood #AhSengDrinks",
+  "offer": "Buy any drink, get half-price cookie."
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 3192,
+   "retry": false
+  }
+ ]
+}

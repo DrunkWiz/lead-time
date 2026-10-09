@@ -3,6 +3,7 @@ import { api } from '../api.js'
 import Card from './Card.jsx'
 import HowPanel from './HowPanel.jsx'
 import TimeBar from './TimeBar.jsx'
+import Waiting from './Waiting.jsx'
 
 export default function Home({ profile, asOf, setAsOf, meta, backtest }) {
   const [data, setData] = useState(null)
@@ -28,7 +29,11 @@ export default function Home({ profile, asOf, setAsOf, meta, backtest }) {
 
       {error && <div className="error" role="alert">{error}</div>}
       {!data && !error && (
-        <div className="cards" aria-busy="true"><div className="skeleton" /><div className="skeleton" /></div>
+        <>
+          <Waiting text="Checking which foods your kitchen can make…"
+            slowText="The model is checking each food against your kitchen for the first time. This can take up to a minute, then it’s saved." />
+          <div className="cards" aria-busy="true"><div className="skeleton" /><div className="skeleton" /></div>
+        </>
       )}
       {data && (
         <>

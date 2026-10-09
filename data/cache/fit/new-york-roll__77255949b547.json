@@ -1,0 +1,21 @@
+{
+ "fit": {
+  "verdict": "make",
+  "adaptation": "",
+  "missing_equipment": [],
+  "reason": "You have all the necessary equipment like the oven, mixer, and stovetop to laminate the dough and bake the roll as described.",
+  "overlaps": [
+   "Butter croissant",
+   "Matcha roll cake"
+  ]
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 872,
+   "retry": false
+  }
+ ]
+}

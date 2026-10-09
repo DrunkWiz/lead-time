@@ -1,0 +1,20 @@
+{
+ "fit": {
+  "verdict": "skip",
+  "adaptation": "",
+  "missing_equipment": [
+   "fryer"
+  ],
+  "reason": "You lack a fryer to deep fry the cookies, and adding a fryer is too big a change for a drink-focused shop.",
+  "overlaps": []
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 820,
+   "retry": false
+  }
+ ]
+}

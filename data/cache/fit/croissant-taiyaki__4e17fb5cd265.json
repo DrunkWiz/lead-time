@@ -1,0 +1,20 @@
+{
+ "fit": {
+  "verdict": "adapt",
+  "adaptation": "croissant pastry served with red bean or custard filling",
+  "missing_equipment": [
+   "moulds"
+  ],
+  "reason": "You have the stovetop but lack the specific fish-shaped moulds, so you should bake the croissant dough separately and serve it with the fillings instead.",
+  "overlaps": []
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 974,
+   "retry": false
+  }
+ ]
+}

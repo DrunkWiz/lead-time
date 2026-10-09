@@ -1,0 +1,56 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Pistachio Cream Base",
+    "steps": [
+     "Blend roasted pistachios into a smooth, rich paste",
+     "Fold in sugar and a touch of cream for spreadability"
+    ]
+   },
+   {
+    "component": "Toasted Kataifi",
+    "steps": [
+     "Shred the kataifi pastry into fine strands",
+     "Toast gently in a pan until golden and crisp"
+    ]
+   },
+   {
+    "component": "Chocolate Assembly",
+    "steps": [
+     "Melt chocolate and temper it for a glossy finish",
+     "Line moulds with chocolate, add filling layers, and seal"
+    ]
+   }
+  ],
+  "swaps": [
+   {
+    "original": "Professional tempering machine",
+    "use": "Stovetop double boiler method",
+    "why": "Shop has stovetop but no tempering machine; manual method works for small batches"
+   }
+  ],
+  "hooks": [
+   "Crunchy kataifi meets creamy pistachio",
+   "Thick chocolate bar with a surprise center",
+   "New dessert drop at Block 216 today"
+  ],
+  "caption": "We are adding a thick chocolate bar filled with rich pistachio cream and toasted kataifi pastry to our menu. It pairs perfectly with our pistachio latte. Come try the new texture and flavor combination this week. #Block216DessertCafe #NewMenu",
+  "offer": "Buy any drink and get 20% off the new chocolate bar this week only."
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": false,
+   "error": "makes a popularity claim ('viral'); describe the food, not its popularity",
+   "retry": false
+  },
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 2672,
+   "retry": true
+  }
+ ]
+}

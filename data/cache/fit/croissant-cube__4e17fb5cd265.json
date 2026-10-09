@@ -1,0 +1,22 @@
+{
+ "fit": {
+  "verdict": "skip",
+  "adaptation": "",
+  "missing_equipment": [
+   "oven",
+   "moulds",
+   "mixer"
+  ],
+  "reason": "You lack the essential oven and moulds to bake laminated dough, making it impossible to produce this pastry.",
+  "overlaps": []
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 645,
+   "retry": false
+  }
+ ]
+}

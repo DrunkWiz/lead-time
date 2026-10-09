@@ -1,0 +1,20 @@
+{
+ "fit": {
+  "verdict": "adapt",
+  "adaptation": "baked marshmallow-cocoa cookie with pistachio filling",
+  "missing_equipment": [],
+  "reason": "You have the stovetop and fridge for melting and setting, but lack an oven to toast the kataifi, so baking the cookie is the best workaround.",
+  "overlaps": [
+   "Milo dinosaur"
+  ]
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 1012,
+   "retry": false
+  }
+ ]
+}

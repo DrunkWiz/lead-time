@@ -91,5 +91,5 @@
   <text x="851" y="286" class="s">JSON</text>
   <text x="845" y="348" class="s">profile</text>
 
-  <text x="40" y="726" class="s">Deploy: Vercel (static React + Python function) or run locally. Cost: $0 (free tiers, NUS SoCLaaS, snapshot data).</text>
+  <text x="40" y="726" class="s">Deploy: one Docker service on Render (free tier), or run locally. Cost: $0 (free tiers, NUS SoCLaaS, snapshot data).</text>
 </svg>

@@ -173,7 +173,7 @@ Built during ForgeHacks (3–10 Oct 2026). The product spec, data choices and de
 | Gemini (fallback model) | Free tier via a Google AI Studio key, no card |
 | Offline rules (last resort) | Free; the app runs fully with no keys |
 | YouTube Data API (recipe links, optional) | Free daily quota |
-| Hosting | Free on Vercel's Hobby plan, or run it locally |
+| Hosting | Free on Render's free web service (or Vercel Hobby), or run it locally |
 
 If a free tier hits its rate limit, the provider chain moves to the next rung, so the app keeps working.
 
@@ -202,12 +202,25 @@ py -3 scripts/fetch_trends.py     # resumable; caches every response
 py -3 scripts/build_series.py
 py -3 scripts/backtest_report.py
 YOUTUBE_API_KEY=... py -3 scripts/fetch_youtube.py   # optional: recipe links on launch plans
-py -3 scripts/warm_cache.py 2023-08-01               # optional: precompute model answers for the demo shops
+py -3 scripts/warm_cache.py 2024-07-06 2026-01-17    # optional: precompute model answers for the demo shops
 ```
 
-## Deploy (Vercel)
+## Deploy (Render, free)
 
-`vercel.json` builds `web/` as static files and serves `api/index.py` as a Python function that routes every `/api/*` path. Add `SOCLAAS_API_KEY`, `SOCLAAS_BASE_URL`, `SOCLAAS_MODEL`, `GEMINI_API_KEY`, `GEMINI_MODEL` and `LT_PROVIDER_CHAIN` in the Vercel dashboard. Keys stay server-side.
+One Docker web service serves the built app and the API from the same port. `Dockerfile` builds `web/` with Node 22, then runs `scripts/serve.py` on Python's standard library, bound to `0.0.0.0:$PORT` (Render sets `$PORT`).
+
+1. Render dashboard → **New → Blueprint** → pick this repo. It reads `render.yaml` (free plan, Docker, health check `/api/meta`).
+2. Paste the secret values when asked: `SOCLAAS_API_KEY`, `SOCLAAS_BASE_URL`, `SOCLAAS_MODEL`, `GEMINI_API_KEY`. All optional: with none, the labelled offline rules answer.
+3. Deploy. The free tier sleeps after 15 minutes idle, so the first visit after a break takes up to a minute to wake.
+
+Model answers for both demo shops are cached in `data/cache/`, so the demo never waits on a model. Run the same container locally:
+
+```bash
+npm --prefix web run build
+PORT=8000 py -3 scripts/serve.py      # app and API on :8000
+```
+
+`vercel.json` still works for Vercel (static `web/dist` plus `api/index.py` as a function) if you prefer it.
 
 ## API
 
@@ -231,7 +244,7 @@ Every response carries `agent.attempts`: which provider answered, and why earlie
 ## Layout
 
 ```
-api/index.py         Vercel function (thin; calls leadtime.app.route)
+api/index.py         API request handler (thin; calls leadtime.app.route), also the Vercel function
 leadtime/            runtime package, standard library only
   config.py          every tuned constant with its reason
   series.py takeoff.py forecast.py backtest.py   code that counts and forecasts
@@ -244,7 +257,9 @@ leadtime/            runtime package, standard library only
   content.py         posting schedule and shot lists from the food's traits (code only)
   rank.py words.py app.py
 scripts/             fetch, build, tune, report (may use pytrends/requests)
-data/                committed snapshot: raw/, series.json, meta.json, concepts.json
+  serve.py           production server: built app + API on $PORT (Render)
+data/                committed snapshot: raw/, series.json, meta.json, concepts.json, cache/ (demo model answers)
+Dockerfile render.yaml   Render deploy
 web/                 React 19 + Vite
 tests/               python -m unittest
 docs/DECISIONS.md    every tuned constant and why

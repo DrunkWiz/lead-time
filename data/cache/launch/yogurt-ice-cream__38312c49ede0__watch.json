@@ -1,0 +1,63 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Base Preparation",
+    "steps": [
+     "Whisk Greek yogurt with sweetener until smooth",
+     "Fold in cream to adjust richness and texture"
+    ]
+   },
+   {
+    "component": "Freezing Process",
+    "steps": [
+     "Pour mixture into freezer-safe containers",
+     "Stir manually every hour to break ice crystals",
+     "Transfer to mixer for final aeration before serving"
+    ]
+   },
+   {
+    "component": "Topping Assembly",
+    "steps": [
+     "Chop fresh fruit into bite-sized pieces",
+     "Break honeycomb into irregular shards",
+     "Spoon yogurt into cups and layer toppings"
+    ]
+   }
+  ],
+  "swaps": [
+   {
+    "original": "soft-serve machine",
+    "use": "manual stirring and mixer",
+    "why": "Shop lacks soft-serve equipment; manual churning mimics texture"
+   },
+   {
+    "original": "specialized honeycomb",
+    "use": "crushed honeycomb candy",
+    "why": "Easier to source and serve in a café setting"
+   }
+  ],
+  "hooks": [
+   "Creamy yogurt meets crunchy honeycomb",
+   "Fresh fruit on soft frozen yogurt",
+   "Korean style dessert in a cup"
+  ],
+  "caption": "Try our new Korean yogurt ice cream. Thick Greek yogurt churned smooth, topped with sweet honeycomb shards and fresh fruit. A refreshing treat for your afternoon. #dessert #singaporefood",
+  "offer": "Buy any dessert, get half-price yogurt ice cream"
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": false,
+   "error": "makes a popularity claim ('craze'); describe the food, not its popularity",
+   "retry": false
+  },
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 2666,
+   "retry": true
+  }
+ ]
+}

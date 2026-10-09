@@ -1,0 +1,20 @@
+{
+ "fit": {
+  "verdict": "make",
+  "adaptation": "",
+  "missing_equipment": [],
+  "reason": "You already have an oven and the necessary ingredients to bake the croissant and cookie dough together.",
+  "overlaps": [
+   "Butter croissant"
+  ]
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 575,
+   "retry": false
+  }
+ ]
+}

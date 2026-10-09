@@ -1,0 +1,21 @@
+{
+ "fit": {
+  "verdict": "make",
+  "adaptation": "",
+  "missing_equipment": [],
+  "reason": "You have all the necessary equipment like a stovetop and fridge to toast the kataifi, melt the chocolate, and assemble the dessert.",
+  "overlaps": [
+   "Pistachio latte",
+   "Chocolate lava cake"
+  ]
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 725,
+   "retry": false
+  }
+ ]
+}

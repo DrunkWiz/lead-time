@@ -1,0 +1,54 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Pistachio Kataifi Filling",
+    "steps": [
+     "Toast kataifi noodles in oven until golden",
+     "Mix toasted noodles with pistachio cream",
+     "Chill mixture in fridge to firm up"
+    ]
+   },
+   {
+    "component": "Marshmallow-Cocoa Shell",
+    "steps": [
+     "Melt marshmallow and cocoa on stovetop",
+     "Stir until smooth and glossy",
+     "Remove from heat to cool slightly"
+    ]
+   },
+   {
+    "component": "Assembly",
+    "steps": [
+     "Portion filling into small balls",
+     "Dip balls in warm marshmallow mixture",
+     "Shape into squares using moulds",
+     "Set in fridge to harden"
+    ]
+   }
+  ],
+  "swaps": [],
+  "hooks": [
+   "Soft mochi meets crunchy pistachio",
+   "Chewy cocoa shell with creamy center",
+   "New dessert texture you need to try"
+  ],
+  "caption": "Block 216 Dessert Café introduces our Dubai chewy cookie. A soft marshmallow-cocoa mochi shell wraps around a rich pistachio kataifi filling. Perfect with your latte. #dessert #singapore",
+  "offer": "Buy one Dubai chewy cookie, get 20% off your next drink"
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": false,
+   "error": "makes a popularity claim ('everyone'); describe the food, not its popularity",
+   "retry": false
+  },
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 2459,
+   "retry": true
+  }
+ ]
+}

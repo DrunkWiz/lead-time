@@ -1,0 +1,53 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Prepare the kunafa",
+    "steps": [
+     "Toast the kataifi strands until golden and crisp",
+     "Crush the toasted strands into small, crunchy pieces",
+     "Mix with pistachio cream for flavor and binding"
+    ]
+   },
+   {
+    "component": "Dip the strawberries",
+    "steps": [
+     "Melt the chocolate in a bowl over warm water",
+     "Dip fresh strawberries halfway into the chocolate",
+     "Place on a tray to let the coating set in the fridge"
+    ]
+   },
+   {
+    "component": "Assemble the cup",
+    "steps": [
+     "Spoon the pistachio kunafa mixture into a cup",
+     "Place the chocolate-dipped strawberry on top",
+     "Serve immediately for best texture contrast"
+    ]
+   }
+  ],
+  "swaps": [
+   {
+    "original": "kataifi",
+    "use": "crushed prawn crackers or fried shallots",
+    "why": "kataifi is hard to find locally; prawn crackers offer similar crunch"
+   }
+  ],
+  "hooks": [
+   "Strawberry meets kunafa? Yes please.",
+   "The Dubai trend is here, but simpler.",
+   "Chocolate dipped strawberry with a twist."
+  ],
+  "caption": "Ah Seng Drinks Stall is adding a sweet twist to our lineup! Try our new Chocolate-Dipped Strawberry with Crushed Pistachio Kunafa. It’s crunchy, creamy, and perfect after your Kopi or Teh Tarik. A little taste of the US trend, made local and budget-friendly. Come grab one before they’re gone! #AhSengDrinks #SingaporeFoodie",
+  "offer": "Buy any drink and get the strawberry cup at half price today only."
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 3336,
+   "retry": false
+  }
+ ]
+}

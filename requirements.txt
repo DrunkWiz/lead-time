@@ -1,0 +1,2 @@
+# Lead Time's runtime uses the Python standard library only: there is nothing to install.
+# The offline data-fetch scripts have their own list in scripts/requirements.txt.

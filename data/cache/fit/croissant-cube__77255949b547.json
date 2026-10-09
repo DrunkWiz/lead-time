@@ -1,0 +1,20 @@
+{
+ "fit": {
+  "verdict": "make",
+  "adaptation": "",
+  "missing_equipment": [],
+  "reason": "You have all the required equipment and the croissant dough skill to bake this directly.",
+  "overlaps": [
+   "Butter croissant"
+  ]
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 557,
+   "retry": false
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "fit": {
+  "verdict": "skip",
+  "adaptation": "",
+  "missing_equipment": [
+   "oven"
+  ],
+  "reason": "You do not have an oven to bake the croissant and cookie dough together.",
+  "overlaps": []
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 554,
+   "retry": false
+  }
+ ]
+}

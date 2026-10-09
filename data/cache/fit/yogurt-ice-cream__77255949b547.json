@@ -1,0 +1,20 @@
+{
+ "fit": {
+  "verdict": "adapt",
+  "adaptation": "churned frozen yogurt served in a cup with honeycomb and fruit toppings",
+  "missing_equipment": [
+   "soft-serve machine"
+  ],
+  "reason": "You have a freezer and blender to churn the yogurt, but lack the soft-serve machine for the original piled presentation, so serve it in a cup instead.",
+  "overlaps": []
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 800,
+   "retry": false
+  }
+ ]
+}

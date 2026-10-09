@@ -1,0 +1,58 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Prepare the pistachio kunafa base",
+    "steps": [
+     "Toast the kataifi pastry until crisp and golden",
+     "Mix toasted pastry with rich pistachio cream",
+     "Press the mixture firmly into serving cups"
+    ]
+   },
+   {
+    "component": "Melt the chocolate coating",
+    "steps": [
+     "Heat chocolate gently on the stovetop",
+     "Stir until smooth and glossy",
+     "Pour a layer over the kunafa base"
+    ]
+   },
+   {
+    "component": "Assemble the dessert",
+    "steps": [
+     "Wash and hull fresh strawberries",
+     "Layer strawberries over the chocolate",
+     "Chill in the fridge to set before serving"
+    ]
+   }
+  ],
+  "swaps": [
+   {
+    "original": "kataifi",
+    "use": "shredded phyllo dough",
+    "why": "Easier to find and toast evenly in small batches"
+   },
+   {
+    "original": "pistachio cream",
+    "use": "blended pistachio paste and butter",
+    "why": "Homemade version uses standard mixer and fridge"
+   }
+  ],
+  "hooks": [
+   "Strawberries meet crunchy pistachio kunafa",
+   "Chocolate layers hide a crispy surprise",
+   "Fresh fruit meets rich Middle Eastern pastry"
+  ],
+  "caption": "We are bringing the Dubai strawberry cup to Block 216 Dessert Café. Imagine crisp toasted kataifi mixed with nutty pistachio cream, layered with melted chocolate and topped with fresh strawberries. It is a texture dream that fits right in with our pistachio latte and chocolate lava cake. Come taste the crunch. #DubaiStrawberryCup #Block216DessertCafe",
+  "offer": "Buy any drink and get the Dubai strawberry cup at a launch discount"
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 3135,
+   "retry": false
+  }
+ ]
+}

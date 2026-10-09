@@ -1,0 +1,21 @@
+{
+ "fit": {
+  "verdict": "skip",
+  "adaptation": "",
+  "missing_equipment": [
+   "fryer",
+   "mixer"
+  ],
+  "reason": "You lack a fryer for deep frying and a mixer for the dough, making it impossible to produce Bomboloni in your current setup.",
+  "overlaps": []
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 864,
+   "retry": false
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Base Preparation",
+    "steps": [
+     "Blend Greek yogurt with honeycomb pieces and fresh fruit until smooth.",
+     "Transfer mixture into individual serving cups for freezing."
+    ]
+   },
+   {
+    "component": "Freezing Process",
+    "steps": [
+     "Place cups in the freezer until the mixture is firm but scoopable.",
+     "Ensure consistent texture by avoiding over-freezing into solid blocks."
+    ]
+   },
+   {
+    "component": "Assembly",
+    "steps": [
+     "Scoop the frozen yogurt base into a bowl or cup.",
+     "Top with extra honeycomb, fresh fruit, and crunchy granola."
+    ]
+   }
+  ],
+  "swaps": [
+   {
+    "original": "soft-serve machine",
+    "use": "freezer cups",
+    "why": "Shop lacks soft-serve equipment; cups allow scoopable texture using existing freezer."
+   },
+   {
+    "original": "honeycomb",
+    "use": "crushed honeycomb candy",
+    "why": "Fresh honeycomb is hard to source; crushed candy provides similar crunch and sweetness."
+   }
+  ],
+  "hooks": [
+   "Korea's newest dessert hits our stall.",
+   "Creamy yogurt meets crunchy honeycomb.",
+   "Your new favorite budget treat is here."
+  ],
+  "caption": "Ah Seng Drinks Stall brings you the Korean yogurt ice cream trend! We blend Greek yogurt with honeycomb and fresh fruit, then freeze it in cups for a scoopable, refreshing dessert. Topped with granola and more honeycomb, it’s a sweet treat that won’t break the bank. Come try it before the hype gets big! #KoreanDessert #AhSengDrinks",
+  "offer": "Buy one Korean Yogurt Ice Cream, get a free Kopi Taro."
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 3599,
+   "retry": false
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "pistachio cream",
+    "steps": [
+     "Toast kataifi pastry on stovetop until golden and crisp",
+     "Grind toasted kataifi with pistachios into a coarse paste",
+     "Blend paste with sugar and oil until smooth and spreadable"
+    ]
+   },
+   {
+    "component": "ice cream base",
+    "steps": [
+     "Blend vanilla ice cream with milk until smooth and slushy",
+     "Pour mixture into a chilled bowl or cup"
+    ]
+   },
+   {
+    "component": "assembly",
+    "steps": [
+     "Drizzle generous amount of pistachio cream over the ice cream",
+     "Top with extra crushed toasted kataifi for crunch",
+     "Serve immediately while cold"
+    ]
+   }
+  ],
+  "swaps": [
+   {
+    "original": "moulds",
+    "use": "spoon and cup",
+    "why": "Stall lacks chocolate moulds; spoon allows direct drizzling and serving"
+   }
+  ],
+  "hooks": [
+   "Crunchy pistachio cream meets soft ice cream",
+   "Skip the line, grab this local twist",
+   "Sweet, nutty, and perfectly chilled"
+  ],
+  "caption": "Ah Seng Drinks Stall brings you a new treat: pistachio cream drizzled over blended ice cream. The creamy nutty sauce pairs with crunchy toasted kataifi for a satisfying texture. Perfect with your Kopi or Teh Tarik. Come try it this week! #SingaporeEats #AhSengDrinks",
+  "offer": "Buy any drink, get pistachio ice cream add-on for $1"
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": false,
+   "error": "makes a popularity claim ('viral'); describe the food, not its popularity",
+   "retry": false
+  },
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 2958,
+   "retry": true
+  }
+ ]
+}

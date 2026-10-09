@@ -1,0 +1,20 @@
+{
+ "fit": {
+  "verdict": "make",
+  "adaptation": "",
+  "missing_equipment": [],
+  "reason": "You already have an espresso machine and fridge, so you can prepare the original Spanish latte exactly as described.",
+  "overlaps": [
+   "Iced Spanish latte"
+  ]
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 522,
+   "retry": false
+  }
+ ]
+}

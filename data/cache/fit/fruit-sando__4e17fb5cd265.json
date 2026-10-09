@@ -1,0 +1,18 @@
+{
+ "fit": {
+  "verdict": "adapt",
+  "adaptation": "whipped cream and fruit sandwich on soft bread",
+  "missing_equipment": [],
+  "reason": "You have the fridge for chilling and the mixer for whipping cream, so you can assemble this fresh bread sandwich without needing an oven or fryer.",
+  "overlaps": []
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 827,
+   "retry": false
+  }
+ ]
+}

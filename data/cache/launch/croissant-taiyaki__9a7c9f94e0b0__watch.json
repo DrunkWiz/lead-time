@@ -1,0 +1,71 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Prepare croissant dough",
+    "steps": [
+     "Mix flour, yeast, sugar, and salt",
+     "Knead in butter and milk until smooth",
+     "Chill dough to relax gluten"
+    ]
+   },
+   {
+    "component": "Shape fish pastry",
+    "steps": [
+     "Roll dough into thin sheets",
+     "Cut into fish shapes manually",
+     "Press filling into center"
+    ]
+   },
+   {
+    "component": "Cook on stovetop",
+    "steps": [
+     "Heat pan with little oil",
+     "Place pastry flat in pan",
+     "Flip gently until golden"
+    ]
+   },
+   {
+    "component": "Fill with sweet paste",
+    "steps": [
+     "Heat red bean or custard",
+     "Pipe into warm pastry",
+     "Seal edges carefully"
+    ]
+   }
+  ],
+  "swaps": [
+   {
+    "original": "fish moulds",
+    "use": "knife and pan",
+    "why": "shop lacks specialised moulds"
+   },
+   {
+    "original": "oven baking",
+    "use": "stovetop pan frying",
+    "why": "shop only has stovetop"
+   },
+   {
+    "original": "fresh custard",
+    "use": "canned custard",
+    "why": "easier storage for stall"
+   }
+  ],
+  "hooks": [
+   "Fish shaped croissants? Yes please.",
+   "Kopi stall adds sweet twist.",
+   "Try this new pastry treat."
+  ],
+  "caption": "Ah Seng Drinks Stall is trying something new. We made croissant taiyaki using our stovetop. It is flaky, sweet, and filled with red bean or custard. Perfect with your teh tarik. Come taste the difference. #SingaporeFood #AhSengDrinks",
+  "offer": "Buy any drink, get half price on croissant taiyaki."
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 3528,
+   "retry": false
+  }
+ ]
+}

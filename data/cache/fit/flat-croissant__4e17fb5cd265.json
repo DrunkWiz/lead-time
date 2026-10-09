@@ -1,0 +1,20 @@
+{
+ "fit": {
+  "verdict": "adapt",
+  "adaptation": "baked flat pastry with caramelised sugar topping",
+  "missing_equipment": [
+   "griddle"
+  ],
+  "reason": "You lack a griddle for pressing, so baking a flat, caramelised pastry version is the best fit.",
+  "overlaps": []
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 717,
+   "retry": false
+  }
+ ]
+}

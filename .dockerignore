@@ -1,0 +1,11 @@
+.env
+.env.*
+.git
+**/__pycache__
+**/*.pyc
+web/node_modules
+web/dist
+.vercel
+.claude
+docs
+tests

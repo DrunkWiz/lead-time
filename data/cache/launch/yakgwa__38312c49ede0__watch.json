@@ -1,0 +1,66 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Dough Preparation",
+    "steps": [
+     "Mix flour, ginger, and sesame oil in a bowl.",
+     "Knead until a smooth, pliable dough forms.",
+     "Rest the dough to relax the gluten."
+    ]
+   },
+   {
+    "component": "Shaping",
+    "steps": [
+     "Roll dough thin and cut into diamond shapes.",
+     "Press a cross-hatch pattern on each piece.",
+     "Place cookies on a lined baking tray."
+    ]
+   },
+   {
+    "component": "Baking",
+    "steps": [
+     "Preheat the oven to a moderate temperature.",
+     "Bake until edges are lightly golden.",
+     "Remove and let cool slightly on the tray."
+    ]
+   },
+   {
+    "component": "Syrup Glazing",
+    "steps": [
+     "Heat honey and a splash of water on the stovetop.",
+     "Simmer until the mixture thickens slightly.",
+     "Brush or dip warm cookies in the syrup."
+    ]
+   }
+  ],
+  "swaps": [
+   {
+    "original": "Deep fryer",
+    "use": "Oven",
+    "why": "Shop lacks a fryer; baking achieves a similar crisp texture without oil immersion."
+   },
+   {
+    "original": "Sesame oil",
+    "use": "Neutral oil",
+    "why": "Sesame oil can be hard to find; neutral oil keeps the honey flavor pure."
+   }
+  ],
+  "hooks": [
+   "Sweet, sticky, and baked not fried.",
+   "Korean honey cookies meet Singapore cafe vibes.",
+   "Try the new glazed ginger cookie treat."
+  ],
+  "caption": "We baked our way to a new classic. Our Yakgwa is now a soft, honey-glazed cookie, perfect with your pistachio latte. #yogakwa #dessert",
+  "offer": "Buy any dessert, get a Yakgwa cookie for half price this week."
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 3325,
+   "retry": false
+  }
+ ]
+}

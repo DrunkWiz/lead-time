@@ -1,0 +1,50 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Brew Robusta Coffee",
+    "steps": [
+     "Use stovetop brewer to extract strong robusta coffee.",
+     "Let the concentrate cool slightly before mixing."
+    ]
+   },
+   {
+    "component": "Whip Salted Foam",
+    "steps": [
+     "Blend cream, condensed milk, and a pinch of salt.",
+     "Whip until thick and frothy using the blender."
+    ]
+   },
+   {
+    "component": "Assemble Drink",
+    "steps": [
+     "Pour cooled coffee into a serving glass.",
+     "Top with the salted milk foam."
+    ]
+   }
+  ],
+  "swaps": [
+   {
+    "original": "espresso machine",
+    "use": "stovetop brewer",
+    "why": "Shop lacks espresso machine; stovetop brewer provides strong robusta base."
+   }
+  ],
+  "hooks": [
+   "Sweet meets salty in this local twist.",
+   "Strong coffee topped with creamy foam.",
+   "Try the new salted coffee foam drink."
+  ],
+  "caption": "Ah Seng Drinks Stall is adding Sea Salt Coffee to the menu. We brew strong robusta coffee using our stovetop brewer, then top it with a thick, lightly sweet foam made from cream, condensed milk, and a hint of salt. It’s a smooth, rich sip that balances bitterness with creaminess. Come by and taste the difference. #SeaSaltCoffee #AhSengDrinks",
+  "offer": "Buy one Sea Salt Coffee, get a free Teh Tarik upgrade."
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 3157,
+   "retry": false
+  }
+ ]
+}

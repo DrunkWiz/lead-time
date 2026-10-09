@@ -1,0 +1,55 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Spread Preparation",
+    "steps": [
+     "Blend cream cheese, softened butter, and minced garlic until smooth.",
+     "Season with a pinch of salt and sugar to balance the richness."
+    ]
+   },
+   {
+    "component": "Bun Assembly",
+    "steps": [
+     "Slice plain buns into wedges or thick slices.",
+     "Pipe or spoon the garlic cheese mixture generously over the bread."
+    ]
+   },
+   {
+    "component": "Stovetop Toasting",
+    "steps": [
+     "Heat a non-stick pan on medium heat with a little butter.",
+     "Toast the topped buns until golden and the cheese is melted."
+    ]
+   }
+  ],
+  "swaps": [
+   {
+    "original": "Oven baking",
+    "use": "Stovetop pan-toasting",
+    "why": "Shop lacks an oven; a pan provides similar browning and melt."
+   },
+   {
+    "original": "Whole buns",
+    "use": "Plain sliced bread or cheap buns",
+    "why": "Easier to prep and fits the budget price band better."
+   }
+  ],
+  "hooks": [
+   "Stop scrolling if you love garlic and cheese.",
+   "Your favorite Korean snack, made local and cheap.",
+   "Creamy, garlicky, and ready in minutes."
+  ],
+  "caption": "Ah Seng Drinks Stall is adding a savory twist to your drink run. Try our new Korean-style cream cheese garlic bread. We blend fresh garlic, butter, and cream cheese into a rich spread, then toast it on our stovetop until golden. Perfect for dipping in your Kopi or Teh Tarik. Come grab a bite before it’s gone! #SingaporeFood #AhSengDrinks",
+  "offer": "Buy any drink, get a garlic bread wedge for $1 extra."
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 3743,
+   "retry": false
+  }
+ ]
+}

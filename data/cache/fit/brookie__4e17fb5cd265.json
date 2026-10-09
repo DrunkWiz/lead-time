@@ -1,0 +1,20 @@
+{
+ "fit": {
+  "verdict": "skip",
+  "adaptation": "",
+  "missing_equipment": [
+   "oven"
+  ],
+  "reason": "You only have stovetop and blender, so you cannot bake the brookie without an oven.",
+  "overlaps": []
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 522,
+   "retry": false
+  }
+ ]
+}

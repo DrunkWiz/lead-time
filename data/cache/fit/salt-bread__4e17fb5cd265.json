@@ -1,0 +1,21 @@
+{
+ "fit": {
+  "verdict": "skip",
+  "adaptation": "",
+  "missing_equipment": [
+   "oven",
+   "mixer"
+  ],
+  "reason": "You lack an oven and mixer, which are essential for laminating and baking the bread.",
+  "overlaps": []
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 582,
+   "retry": false
+  }
+ ]
+}

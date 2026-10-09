@@ -1,0 +1,21 @@
+{
+ "fit": {
+  "verdict": "make",
+  "adaptation": "",
+  "missing_equipment": [],
+  "reason": "You have all the necessary equipment like moulds, stovetop, and fridge to temper the chocolate and assemble the bar.",
+  "overlaps": [
+   "Pistachio latte",
+   "Chocolate lava cake"
+  ]
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 674,
+   "retry": false
+  }
+ ]
+}

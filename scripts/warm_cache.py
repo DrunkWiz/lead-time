@@ -25,11 +25,13 @@ def main():
             if status != 200:
                 print(p["id"], d, rec)
                 continue
-            for card in rec["cards"] + rec["more"]:
+            # every concept, not just the cards: Explore opens any of them
+            _, listing = route("GET", "/api/concepts", query={"as_of": d} if d else {})
+            for c in listing["concepts"]:
                 _, lp = route("POST", "/api/launch",
-                              body={"profile": p["profile"], "as_of": d, "concept_id": card["id"]})
-                print(f"{p['id']:<14} {d or 'snapshot':<11} {card['id']:<26} "
-                      f"fit={card['fit_provider']} plan={lp.get('plan_provider')}")
+                              body={"profile": p["profile"], "as_of": d, "concept_id": c["id"]})
+                print(f"{p['id']:<14} {d or 'snapshot':<11} {c['id']:<26} "
+                      f"fit={lp.get('fit_provider')} plan={lp.get('plan_provider')}", flush=True)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,22 @@
+{
+ "fit": {
+  "verdict": "adapt",
+  "adaptation": "blend yogurt with honeycomb and fruit, then freeze in cups for a scoopable dessert",
+  "missing_equipment": [
+   "soft-serve machine"
+  ],
+  "reason": "You do not have a soft-serve machine to dispense the yogurt, but you can make a frozen yogurt cup instead.",
+  "overlaps": [
+   "Milo dinosaur"
+  ]
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 791,
+   "retry": false
+  }
+ ]
+}

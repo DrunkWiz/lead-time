@@ -1,0 +1,44 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Brew Coffee Base",
+    "steps": [
+     "Use espresso machine to brew strong robusta coffee shots.",
+     "Allow coffee to cool slightly before handling."
+    ]
+   },
+   {
+    "component": "Prepare Salted Foam",
+    "steps": [
+     "Whip cream and condensed milk in mixer until soft peaks form.",
+     "Fold in a pinch of sea salt for savory balance."
+    ]
+   },
+   {
+    "component": "Assemble Drink",
+    "steps": [
+     "Pour cooled coffee into serving glass.",
+     "Gently spoon salted foam on top to create layers."
+    ]
+   }
+  ],
+  "swaps": [],
+  "hooks": [
+   "Salty foam meets strong coffee.",
+   "The twist your palate needs.",
+   "Vietnamese classic, Singapore style."
+  ],
+  "caption": "We are bringing back the classic Vietnamese sea salt coffee to Block 216 Dessert Café. We brew strong robusta shots and top them with a thick, lightly sweetened foam made with cream, condensed milk, and a touch of sea salt. It balances the bitterness of the coffee with a creamy, savory finish. Perfect with our pistachio latte or butter croissant. Come try the new addition to our drink menu. #seaSaltCoffee #SingaporeEats",
+  "offer": "Buy any dessert and get the Sea Salt Coffee at half price this launch week."
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 2649,
+   "retry": false
+  }
+ ]
+}

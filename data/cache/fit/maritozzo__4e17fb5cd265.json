@@ -1,0 +1,21 @@
+{
+ "fit": {
+  "verdict": "skip",
+  "adaptation": "",
+  "missing_equipment": [
+   "oven",
+   "mixer"
+  ],
+  "reason": "You lack an oven and mixer to bake the brioche dough required for this pastry.",
+  "overlaps": []
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 589,
+   "retry": false
+  }
+ ]
+}

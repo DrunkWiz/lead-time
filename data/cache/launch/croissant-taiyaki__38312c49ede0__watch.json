@@ -1,0 +1,47 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Prepare croissant dough",
+    "steps": [
+     "Mix flour, yeast, sugar, salt, and milk in the mixer.",
+     "Knead until smooth, then chill the dough in the fridge.",
+     "Laminate with butter using the mixer and rolling techniques."
+    ]
+   },
+   {
+    "component": "Shape and fill",
+    "steps": [
+     "Roll out dough and cut into triangles.",
+     "Place red bean or custard filling at the wide end.",
+     "Roll tightly and press into the fish-shaped moulds."
+    ]
+   },
+   {
+    "component": "Bake",
+    "steps": [
+     "Proof the shaped dough until puffy.",
+     "Brush with egg wash for a golden finish.",
+     "Bake in the oven until crisp and golden brown."
+    ]
+   }
+  ],
+  "swaps": [],
+  "hooks": [
+   "Croissant meets taiyaki? Yes please.",
+   "Flaky layers inside a fish shape.",
+   "Your new favourite dessert is here."
+  ],
+  "caption": "We’ve combined two classics into one. Our new Croissant Taiyaki uses our signature buttery croissant dough, shaped into a fish and filled with smooth red bean or rich custard. It’s flaky, sweet, and perfect with your Pistachio latte. Come try the fusion that’s taking off in South Korea. #dessert #singaporefood",
+  "offer": "Buy any drink and get the Croissant Taiyaki at half price for launch week."
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 3054,
+   "retry": false
+  }
+ ]
+}

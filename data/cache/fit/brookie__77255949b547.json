@@ -1,0 +1,20 @@
+{
+ "fit": {
+  "verdict": "make",
+  "adaptation": "",
+  "missing_equipment": [],
+  "reason": "You have an oven and the necessary baking tools to bake this half-brownie, half-cookie treat.",
+  "overlaps": [
+   "Chocolate lava cake"
+  ]
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 521,
+   "retry": false
+  }
+ ]
+}

@@ -10,6 +10,7 @@ import Sparkline from './Sparkline.jsx'
 import StageButtons from './StageButtons.jsx'
 import Status from './Status.jsx'
 import Tracker from './Tracker.jsx'
+import Waiting from './Waiting.jsx'
 
 const LANG = { en: 'English', ko: 'Korean', ja: 'Japanese', zh: 'Chinese', ar: 'Arabic', vi: 'Vietnamese' }
 
@@ -65,13 +66,14 @@ export default function Detail({ id, profile, asOf }) {
   const [plan, setPlan] = useState(null)
   const [concept, setConcept] = useState(null)
   const [error, setError] = useState(null)
+  const [planError, setPlanError] = useState(null)
   const board = useBoard()
 
   useEffect(() => {
     let live = true
-    setPlan(null); setConcept(null); setError(null)
+    setPlan(null); setConcept(null); setError(null); setPlanError(null)
     api.concept(id, asOf).then((c) => live && setConcept(c)).catch((e) => live && setError(e.message))
-    api.launch(id, profile, asOf).then((p) => live && setPlan(p)).catch((e) => live && setError(e.message))
+    api.launch(id, profile, asOf).then((p) => live && setPlan(p)).catch((e) => live && setPlanError(e.message))
     window.scrollTo(0, 0)
     return () => { live = false }
   }, [id, profile, asOf])
@@ -126,7 +128,11 @@ export default function Detail({ id, profile, asOf }) {
 
       <section className="block">
         <h3>When</h3>
-        {!plan ? <p className="loading">Working out your plan…</p> : <p className="when-big">{plan.when.text}</p>}
+        {plan
+          ? <p className="when-big">{plan.when.text}</p>
+          : planError
+            ? <div className="error" role="alert">{planError}</div>
+            : <Waiting text="Working out your plan…" />}
       </section>
 
       {plan && fit && (

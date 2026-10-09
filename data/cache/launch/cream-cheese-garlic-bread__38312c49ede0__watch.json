@@ -1,0 +1,44 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Prepare the garlic butter soak",
+    "steps": [
+     "Melt butter on the stovetop until liquid.",
+     "Mix in minced garlic until fragrant."
+    ]
+   },
+   {
+    "component": "Assemble the buns",
+    "steps": [
+     "Cut round buns into wedges without separating them.",
+     "Pipe sweet cream cheese into the gaps between wedges."
+    ]
+   },
+   {
+    "component": "Bake and finish",
+    "steps": [
+     "Brush the garlic butter generously over the buns.",
+     "Bake in the oven until golden and warm."
+    ]
+   }
+  ],
+  "swaps": [],
+  "hooks": [
+   "Cream cheese stuffed garlic bread?",
+   "Your new dessert café obsession.",
+   "Sweet, savory, and totally worth it."
+  ],
+  "caption": "We are bringing the Korean cream cheese garlic bread to Block 216! Imagine soft buns cut into wedges, stuffed with sweet cream cheese, and soaked in rich garlic butter. It is the perfect sweet and savory treat to pair with your pistachio latte or matcha roll cake. Come try it fresh from the oven. #Block216 #CreamCheeseGarlicBread",
+  "offer": "Buy any drink and get half price on the new garlic bread."
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 2633,
+   "retry": false
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "fit": {
+  "verdict": "make",
+  "adaptation": "",
+  "missing_equipment": [],
+  "reason": "You already have the stovetop needed to make the hard-crack sugar coating for the fruit skewers.",
+  "overlaps": []
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 576,
+   "retry": false
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "plan": {
+  "method": [
+   {
+    "component": "Dough Preparation",
+    "steps": [
+     "Mix flour, sesame oil, and ginger into a smooth dough.",
+     "Roll out the dough thinly and cut into diamond shapes."
+    ]
+   },
+   {
+    "component": "Cooking Method",
+    "steps": [
+     "Pan-fry the dough pieces in oil until golden and crisp.",
+     "Drain excess oil on paper towels to keep texture light."
+    ]
+   },
+   {
+    "component": "Syrup Application",
+    "steps": [
+     "Heat honey and water in a pot to create a thin syrup.",
+     "Toss the fried cookies in syrup until coated and glossy."
+    ]
+   },
+   {
+    "component": "Assembly",
+    "steps": [
+     "Blend ice, milk, and base drink ingredients in the blender.",
+     "Crumble the yakgwa over the top of the cold drink."
+    ]
+   }
+  ],
+  "swaps": [
+   {
+    "original": "deep fryer",
+    "use": "stovetop pan",
+    "why": "Shop lacks a fryer; shallow frying achieves similar crispness with less oil."
+   },
+   {
+    "original": "whole yakgwa pieces",
+    "use": "crumbled yakgwa",
+    "why": "Easier to handle as a topping for drinks and prevents sogginess."
+   }
+  ],
+  "hooks": [
+   "Stop drinking plain kopi.",
+   "Korean cookies meet local drinks.",
+   "This topping changes everything."
+  ],
+  "caption": "We tried the Korean yakgwa trend and made it local. Crispy honey-ginger cookies crumbled over your favourite iced kopi or teh tarik. Sweet, crunchy, and perfect for hot days. Come taste the crunch! #SingaporeFood #AhSengDrinks",
+  "offer": "Buy any drink, get a free yakgwa crumble topping."
+ },
+ "provider": "soclaas",
+ "attempts": [
+  {
+   "provider": "soclaas",
+   "ok": true,
+   "ms": 3363,
+   "retry": false
+  }
+ ]
+}
