@@ -84,7 +84,7 @@ Most Singapore food trends last about two months. For a small shop, the most use
 python, react, vite, javascript, svg, google-trends, pytrends, qwen, soclaas, gemini, docker, render
 
 ## Links
-- GitHub repo: (add URL)
+- GitHub repo: https://github.com/DrunkWiz/lead-time
 - Demo video (YouTube, public): (add URL)
 - Live demo: (add Render URL)
 
