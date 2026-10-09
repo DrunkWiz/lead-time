@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6E5A4B"/>
+    </marker>
+    <style>
+      .t { font-size: 15px; fill: #2B1E16; }
+      .s { font-size: 12.5px; fill: #6E5A4B; }
+      .h { font-size: 13px; font-weight: 700; letter-spacing: 1.2px; fill: #6E5A4B; }
+      .b { font-size: 16px; font-weight: 700; fill: #2B1E16; }
+      .line { stroke: #6E5A4B; stroke-width: 1.6; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#FBF7F0"/>
+  <text x="40" y="48" font-size="26" font-weight="700" fill="#2B1E16" font-family="Georgia, serif">Lead Time: how it works</text>
+  <text x="40" y="74" class="s">The model reads and judges. Code counts and forecasts. Every number, date and trend claim comes from code.</text>
+
+  <!-- Column headers -->
+  <text x="40" y="118" class="h">OFFLINE (SCRIPTS, RUN BY US)</text>
+  <text x="430" y="118" class="h">RUNTIME API (PYTHON, STDLIB ONLY)</text>
+  <text x="900" y="118" class="h">APP (REACT, ON THE PHONE)</text>
+
+  <!-- Offline column -->
+  <rect x="40" y="134" width="330" height="92" rx="12" fill="#FFFFFF" stroke="#E6DCCD"/>
+  <text x="58" y="162" class="b">Google Trends (pytrends)</text>
+  <text x="58" y="184" class="s">22 foods × 7 regions, every alias in its</text>
+  <text x="58" y="202" class="s">own language, weekly, 5 years</text>
+
+  <rect x="40" y="250" width="330" height="92" rx="12" fill="#FFFFFF" stroke="#E6DCCD"/>
+  <text x="58" y="278" class="b">Snapshot files (committed)</text>
+  <text x="58" y="300" class="s">raw/*.json → series.json, concepts.json,</text>
+  <text x="58" y="318" class="s">meta.json. No live calls in the app.</text>
+
+  <rect x="40" y="366" width="330" height="92" rx="12" fill="#FFFFFF" stroke="#E6DCCD"/>
+  <text x="58" y="394" class="b">Backtest + tuning</text>
+  <text x="58" y="416" class="s">Rewind to each past case, forecast with</text>
+  <text x="58" y="434" class="s">only data visible then, compare reality</text>
+
+  <path class="line" d="M205 226 L205 248"/>
+  <path class="line" d="M205 342 L205 364"/>
+
+  <!-- Runtime: code box -->
+  <rect x="430" y="134" width="410" height="324" rx="14" fill="#E3F0E7" stroke="#2F7D4F" stroke-width="1.5"/>
+  <text x="450" y="162" class="b" fill="#2F7D4F">CODE: counts and forecasts</text>
+  <text x="450" y="190" class="t">• Takeoff: 3× baseline, sustained 3 of 4 weeks</text>
+  <text x="450" y="214" class="t">• Lag abroad → Singapore, arrival window</text>
+  <text x="450" y="238" class="t">• Status: coming soon / arriving / here / peaked</text>
+  <text x="450" y="262" class="t">• How long trends last; "still climbing"</text>
+  <text x="450" y="286" class="t">• Go / Wait / Skip, stock plan</text>
+  <text x="450" y="310" class="t">• Keep / push / drop from your sales</text>
+  <text x="450" y="334" class="t">• Offer maths, content schedule, dates</text>
+  <text x="450" y="358" class="t">• Ranking, weekly "what changed" feed</text>
+  <text x="450" y="390" class="s">Every function takes as_of. A test corrupts all data</text>
+  <text x="450" y="408" class="s">after as_of and checks nothing changes (no lookahead).</text>
+  <text x="450" y="436" class="s">93 tests · no network · no keys</text>
+
+  <!-- Runtime: model box -->
+  <rect x="430" y="484" width="410" height="200" rx="14" fill="#FBF0DC" stroke="#D98E1C" stroke-width="1.5"/>
+  <text x="450" y="512" class="b" fill="#8A5508">MODEL: reads and judges</text>
+  <text x="450" y="540" class="t">• Can this kitchen make it? make / adapt / skip</text>
+  <text x="450" y="564" class="t">• Overlaps with your current menu</text>
+  <text x="450" y="588" class="t">• Launch-plan words: method, hooks, caption</text>
+  <text x="450" y="618" class="s">Schema-checked. Rejected if it has digits (fit), dates, links,</text>
+  <text x="450" y="636" class="s">quantities or hype words; one retry with the reason, never repaired.</text>
+  <text x="450" y="664" class="s">Chain: SoCLaaS (Qwen) → Gemini → labelled offline rules</text>
+
+  <path class="line" d="M370 296 L428 296"/>
+  <path class="line" d="M635 458 L635 482"/>
+
+  <!-- App column -->
+  <rect x="900" y="134" width="260" height="550" rx="14" fill="#FFFFFF" stroke="#E6DCCD"/>
+  <text x="918" y="164" class="b">Picks</text>
+  <text x="918" y="184" class="s">3 foods for your kitchen + evidence</text>
+  <text x="918" y="222" class="b">Should you do it?</text>
+  <text x="918" y="242" class="s">verdict, run length, profit range</text>
+  <text x="918" y="280" class="b">Launch offer + content plan</text>
+  <text x="918" y="300" class="s">priced offers, dated shot lists</text>
+  <text x="918" y="338" class="b">This week</text>
+  <text x="918" y="358" class="s">what moved, for foods you watch</text>
+  <text x="918" y="396" class="b">My board</text>
+  <text x="918" y="416" class="s">watch → plan → launch → track</text>
+  <text x="918" y="454" class="b">Pretend it's…</text>
+  <text x="918" y="474" class="s">rewind any screen, reveal reality</text>
+  <line x1="918" y1="506" x2="1142" y2="506" stroke="#E6DCCD"/>
+  <text x="918" y="532" class="s">Shop profile, costs and sales</text>
+  <text x="918" y="550" class="s">stay in the browser (localStorage).</text>
+  <text x="918" y="568" class="s">No accounts.</text>
+
+  <path class="line" d="M842 296 L898 296"/>
+  <path class="line" d="M898 330 L842 330"/>
+  <text x="851" y="286" class="s">JSON</text>
+  <text x="845" y="348" class="s">profile</text>
+
+  <text x="40" y="726" class="s">Deploy: Vercel (static React + Python function) or run locally. Cost: $0 (free tiers, NUS SoCLaaS, snapshot data).</text>
+</svg>
