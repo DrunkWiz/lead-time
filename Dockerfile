@@ -16,7 +16,9 @@ ENV PYTHONUNBUFFERED=1 PYTHONIOENCODING=utf-8
 COPY leadtime/ leadtime/
 COPY api/ api/
 COPY data/ data/
-COPY scripts/dev_server.py scripts/serve.py scripts/
+COPY scripts/dev_server.py scripts/serve.py scripts/precompute.py scripts/
 COPY --from=web /web/dist web/dist
+# backtest and weekly feeds depend only on the snapshot: compute them here, not per request
+RUN python scripts/precompute.py
 EXPOSE 8000
 CMD ["python", "scripts/serve.py"]

@@ -75,7 +75,8 @@ Most Singapore food trends last about two months. For a small shop, the most use
 - **Limits:** snapshot data to 3 Oct 2026; 22 foods; only 4 arrival forecasts could be strictly checked; the late-entry rule is in-sample; no TikTok or Instagram data (scraping breaks their terms); no YouTube recipe links in this snapshot; the board lives in one browser.
 
 ### Try it
-- **Live demo:** (Render URL). *Hosted on Render's free tier: if nobody has used it for 15 minutes, the first load takes up to a minute while the server wakes up. After that it's instant.* Tap **Dessert café**, then the **6 Jul 2024** chip under "Pretend it's…".
+- **Live demo:** https://lead-time-cjnn.onrender.com
+  *Hosted on Render's free tier: if nobody has used it for 15 minutes, the first load takes up to a minute while the server wakes up. After that it's instant.* Tap **Dessert café**, then the **6 Jul 2024** chip under "Pretend it's…".
 - **Run locally:** see the README (one command after building the frontend).
 
 ---
@@ -86,7 +87,7 @@ python, react, vite, javascript, svg, google-trends, pytrends, qwen, soclaas, ge
 ## Links
 - GitHub repo: https://github.com/DrunkWiz/lead-time
 - Demo video (YouTube, public): (add URL)
-- Live demo: (add Render URL)
+- Live demo: https://lead-time-cjnn.onrender.com
 
 ---
 

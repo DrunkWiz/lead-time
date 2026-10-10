@@ -4,6 +4,8 @@
 
 ForgeHacks Online 2026 · AI + Business track
 
+**Live demo:** https://lead-time-cjnn.onrender.com (free tier: the first visit after a quiet spell takes up to a minute to wake up). Tap **Dessert café**, then the **6 Jul 2024** chip under "Pretend it's…".
+
 A dessert takes off in Seoul or Dubai and reaches Singapore some weeks later. By the time a small café hears about it, every other shop already has it on the menu. Lead Time measures that gap from five years of search history, applies it to what's rising abroad right now, and checks each candidate against your menu and equipment. You get three foods to try. Each one comes with its evidence, a launch date, the version your kitchen can make, and three ways to announce it.
 
 ## What a shop can do with it

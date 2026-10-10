@@ -10,3 +10,4 @@ data/fetch_log.txt
 data/cache/fit/_test*
 data/fetch_log2.txt
 video/
+data/cache/derived/

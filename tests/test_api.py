@@ -25,6 +25,10 @@ class ApiTest(unittest.TestCase):
             self.addCleanup(p.stop)
         fit._memory.clear()
         launch._memory.clear()
+        app._derived.clear()
+        p = mock.patch.object(app, "DERIVED_DIR", app.DERIVED_DIR.parent / "_test_nonexistent")
+        p.start()
+        self.addCleanup(p.stop)
         app._chain = Chain([], offline=OfflineProvider({"fit": fit.offline_fit, "launch": launch.offline_plan}))
         self.addCleanup(setattr, app, "_chain", None)
         # keep tests off the on-disk caches
@@ -35,6 +39,13 @@ class ApiTest(unittest.TestCase):
 
     def as_of(self, i):
         return week_end(self.snap["weeks"][i]).isoformat()
+
+    def test_backtest_computed_once_per_snapshot(self):
+        with mock.patch.object(app.backtest, "run", wraps=app.backtest.run) as run:
+            first = app.route("GET", "/api/backtest")
+            second = app.route("GET", "/api/backtest")
+        self.assertEqual(run.call_count, 1)
+        self.assertEqual(first, second)
 
     def test_meta(self):
         status, body = app.route("GET", "/api/meta")

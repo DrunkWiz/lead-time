@@ -1,7 +1,10 @@
 """HTTP-agnostic API. api/index.py (Vercel) and scripts/dev_server.py both call route()."""
 import datetime as dt
 import json
+import re
+import threading
 from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
 from urllib.parse import unquote
 
 from . import backtest, config, content, data, decision, feed, fit, launch, lifecycle, offers, rank, words
@@ -86,6 +89,30 @@ def _profile(body):
         return fit.normalise_profile(body.get("profile") or {})
     except SchemaError as e:
         raise ApiError(400, f"That shop profile doesn't look right ({e}).")
+
+
+DERIVED_DIR = Path(__file__).resolve().parent.parent / "data" / "cache" / "derived"
+DERIVED_MAX = 256       # distinct (name, as_of) results kept in memory before starting over
+_derived = {}
+_derived_lock = threading.Lock()
+
+
+def _derived_path(key):
+    return DERIVED_DIR / (re.sub(r"[^A-Za-z0-9_.-]", "_", key) + ".json")
+
+
+def derived(name, compute):
+    """Results that depend only on the snapshot (backtest, weekly feed): computed once per
+    process. scripts/precompute.py can write them at deploy time, because a free-tier CPU
+    takes over ten seconds for the backtest. Keyed by snapshot so a data refresh misses."""
+    key = f"{name}__{data.meta().get('fetched_at')}"
+    with _derived_lock:   # one computation at a time; a second caller waits for the first
+        if key not in _derived:
+            if len(_derived) >= DERIVED_MAX:
+                _derived.clear()
+            path = _derived_path(key)
+            _derived[key] = json.loads(path.read_text(encoding="utf-8")) if path.exists() else compute()
+        return _derived[key]
 
 
 def get_meta(q, body):
@@ -193,9 +220,9 @@ def get_changes(q, body):
         weeks = int(q.get("weeks") or feed.FEED_WEEKS)
     except ValueError:
         raise ApiError(400, "weeks must be a whole number.")
-    out = feed.changes(data.snapshot(), data.concepts(), as_of, weeks)
-    out["agent"] = {"attempts": []}
-    return out
+    out = derived(f"changes_{as_of}_{weeks}",
+                  lambda: feed.changes(data.snapshot(), data.concepts(), as_of, weeks))
+    return dict(out, agent={"attempts": []})
 
 
 def post_plan(q, body):
@@ -328,9 +355,8 @@ def get_backtest(q, body):
     snap = data.snapshot_date()
     if not snap:
         raise ApiError(503, "No trend snapshot yet.")
-    out = backtest.run(data.snapshot(), data.concepts(), snap)
-    out["agent"] = {"attempts": []}
-    return out
+    out = derived("backtest", lambda: backtest.run(data.snapshot(), data.concepts(), snap))
+    return dict(out, agent={"attempts": []})
 
 
 def route(method, path, query=None, body=None):
