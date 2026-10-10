@@ -3,6 +3,7 @@
   "configurations": [
     { "name": "api", "runtimeExecutable": "py", "runtimeArgs": ["-3.14", "scripts/dev_server.py"], "port": 8787 },
     { "name": "web", "runtimeExecutable": "npm", "runtimeArgs": ["--prefix", "web", "run", "dev", "--", "--port", "5174", "--strictPort"], "port": 5174 },
-    { "name": "prod", "runtimeExecutable": "py", "runtimeArgs": ["-3.14", "scripts/serve.py"], "port": 8010, "autoPort": true }
+    { "name": "prod", "runtimeExecutable": "py", "runtimeArgs": ["-3.14", "scripts/serve.py"], "port": 8010, "autoPort": true },
+    { "name": "e2e", "runtimeExecutable": "py", "runtimeArgs": ["-3.14", "-c", "import os, runpy; os.environ['LT_PROVIDER_CHAIN'] = 'offline'; runpy.run_path('scripts/serve.py', run_name='__main__')"], "port": 8766, "autoPort": true }
   ]
 }

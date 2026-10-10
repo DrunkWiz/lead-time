@@ -69,22 +69,24 @@
 
   <!-- App column -->
   <rect x="900" y="134" width="260" height="550" rx="14" fill="#FFFFFF" stroke="#E6DCCD"/>
-  <text x="918" y="164" class="b">Picks</text>
-  <text x="918" y="184" class="s">3 foods for your kitchen + evidence</text>
-  <text x="918" y="222" class="b">Should you do it?</text>
-  <text x="918" y="242" class="s">verdict, run length, profit range</text>
-  <text x="918" y="280" class="b">Launch offer + content plan</text>
-  <text x="918" y="300" class="s">priced offers, dated shot lists</text>
-  <text x="918" y="338" class="b">This week</text>
-  <text x="918" y="358" class="s">what moved, for foods you watch</text>
-  <text x="918" y="396" class="b">My board</text>
-  <text x="918" y="416" class="s">watch → plan → launch → track</text>
-  <text x="918" y="454" class="b">Pretend it's…</text>
-  <text x="918" y="474" class="s">rewind any screen, reveal reality</text>
-  <line x1="918" y1="506" x2="1142" y2="506" stroke="#E6DCCD"/>
-  <text x="918" y="532" class="s">Shop profile, costs and sales</text>
-  <text x="918" y="550" class="s">stay in the browser (localStorage).</text>
-  <text x="918" y="568" class="s">No accounts.</text>
+  <text x="918" y="164" class="b">Overview</text>
+  <text x="918" y="184" class="s">foods for your kitchen + evidence</text>
+  <text x="918" y="218" class="b">Should you do it?</text>
+  <text x="918" y="238" class="s">verdict, run length, profit range</text>
+  <text x="918" y="272" class="b">Launch offer + content plan</text>
+  <text x="918" y="292" class="s">priced offers, dated shot lists</text>
+  <text x="918" y="326" class="b">Trend radar</text>
+  <text x="918" y="346" class="s">search, filter, compare side by side</text>
+  <text x="918" y="380" class="b">Weekly briefing</text>
+  <text x="918" y="400" class="s">what moved, for foods you watch</text>
+  <text x="918" y="434" class="b">Launch board</text>
+  <text x="918" y="454" class="s">watch → plan → launch → track sales</text>
+  <text x="918" y="488" class="b">Explore history</text>
+  <text x="918" y="508" class="s">rewind any screen, reveal reality</text>
+  <line x1="918" y1="536" x2="1142" y2="536" stroke="#E6DCCD"/>
+  <text x="918" y="562" class="s">Kitchen profile, costs and sales</text>
+  <text x="918" y="580" class="s">stay in the browser (localStorage).</text>
+  <text x="918" y="598" class="s">No accounts.</text>
 
   <path class="line" d="M842 296 L898 296"/>
   <path class="line" d="M898 330 L842 330"/>
