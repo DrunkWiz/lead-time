@@ -33,22 +33,24 @@ Small food businesses in Singapore: dessert cafés, bakeries, hawker drinks stal
 Lead Time watches weekly Google search interest for 22 trending foods across Singapore, South Korea, Japan, Taiwan, the UAE, the US and Malaysia. It measures how long foods have taken to travel from abroad to Singapore, applies that to what's rising now, and matches the result against the shop's own equipment, price range and current menu.
 
 ### Key features
-- **Picks:** up to three foods heading for Singapore that *this* kitchen can make, each with a chart showing where it started and whether Singapore is moving yet.
+- **Overview:** opens straight away on an example dessert café (no sign-up). Up to three foods heading for Singapore that *this* kitchen can make, each with a chart showing where it started and whether Singapore is moving yet. **Personalise my picks** sets up your own kitchen in three questions.
 - **Should you do it?** Go / Go but late / Wait and watch / Skip, with plain reasons: timing, whether the kitchen can make it, overlap with the current menu, how long trends usually last here (7 to 13 weeks; a few run a year), and a profit range from the shop's own price and sales estimate.
 - **What to charge:** type what each part costs per portion and get a suggested price and margin.
 - **Stock plan:** "bulk order until 10 Aug, then buy week by week", so nobody is left holding kataifi when the trend dies.
 - **Launch offer:** six offers (giveaway, discount, second half price, loyalty card, daily drop, bundle) priced against the shop's own costs, with what each costs and how many sales it takes to pay back. One is suggested for the timing.
 - **Content plan:** a dated posting schedule with shot lists chosen from what the food is (a filled bar gets "the cut", a crunchy one "the crunch", a drink "the pour").
 - **After launch:** log weekly sales and get push / keep / rethink / wind down, read against Singapore's search curve. If sales drop while searches are still up, the item is the problem, not the trend.
-- **This week:** a weekly feed of what moved, flagged for foods the shop is watching.
-- **Pretend it's…:** rewind every screen to any past date using only the data that existed then, then reveal what actually happened.
+- **Trend radar:** every food we track, searchable and filterable, with side-by-side comparison of up to three.
+- **Launch board:** Watch → Plan → Launched, with a launch timeline, a combined shopping list, the kit you're missing, and a backup you can download and restore.
+- **Weekly briefing:** a weekly feed of what moved, flagged for foods the shop is watching.
+- **Explore history:** rewind every screen to any past date using only the data that existed then, then reveal what actually happened.
 
 ### How it works: the model reads and judges, code counts and forecasts
 - **Data:** Google Trends via pytrends, every alias in its own language (탕후루, ドバイチョコ, شوكولاتة دبي…), committed as a snapshot. The app never calls Google live, and the snapshot date is shown on every screen.
 - **Code (Python standard library only):** detects each region's takeoff (3× its recent baseline, sustained for 3 of the next 4 weeks), measures the lag to Singapore, builds arrival windows from past cases, measures how long trends last here, and computes every verdict, date, price and profit. Every function takes an `as_of` date. One test corrupts all data after that date and checks that nothing changes, so there's no lookahead.
 - **AI:** an open model (Qwen on NUS SoCLaaS, with Gemini as fallback) judges whether a kitchen can make a food, spots overlaps with the shop's menu, and writes the launch-plan words. Every answer is schema-validated and rejected if it contains a date, a link, a quantity, a menu item the shop doesn't sell, or a popularity claim ("viral", "hottest"). A rejected answer gets one retry with the reason. It is never patched up by us. If every model fails, clearly labelled offline rules answer, so the app always works.
-- **Frontend:** React 19 + Vite, hand-written SVG charts, designed phone-first.
-- **93 automated tests** that run with no network and no API keys.
+- **Frontend:** React 19 + Vite, hand-written SVG charts, a responsive workspace that works on a phone between orders or on the shop laptop.
+- **94 Python tests** that run with no network and no API keys, plus **13 browser tests** (Playwright) covering the main workflows at phone, tablet and desktop widths.
 
 ### Technologies used
 Python (standard library runtime), React 19, Vite, hand-written SVG, Google Trends (pytrends, offline), Qwen via NUS SoCLaaS, Google Gemini, Docker, Render.
@@ -76,13 +78,13 @@ Most Singapore food trends last about two months. For a small shop, the most use
 
 ### Try it
 - **Live demo:** https://lead-time-cjnn.onrender.com
-  *Hosted on Render's free tier: if nobody has used it for 15 minutes, the first load takes up to a minute while the server wakes up. After that it's instant.* Tap **Dessert café**, then the **6 Jul 2024** chip under "Pretend it's…".
+  *Hosted on Render's free tier: if nobody has used it for 15 minutes, the first load takes up to a minute while the server wakes up. After that it's instant.* It opens on an example dessert café. Tap **Explore history** (top right), then the **6 Jul 2024** chip, and open Dubai chocolate.
 - **Run locally:** see the README (one command after building the frontend).
 
 ---
 
 ## Built with (tags)
-python, react, vite, javascript, svg, google-trends, pytrends, qwen, soclaas, gemini, docker, render
+python, react, vite, javascript, svg, google-trends, pytrends, qwen, soclaas, gemini, playwright, docker, render
 
 ## Links
 - GitHub repo: https://github.com/DrunkWiz/lead-time
@@ -91,15 +93,17 @@ python, react, vite, javascript, svg, google-trends, pytrends, qwen, soclaas, ge
 
 ---
 
-## Image gallery: screenshot checklist
+## Image gallery
 
-Capture in Chrome at iPhone 12 Pro size (F12 → Ctrl+Shift+M). To save: DevTools **⋮** menu → **Capture screenshot**, or **Capture full size screenshot** for long pages. Use the Dessert café demo shop.
+Ready to upload from `docs/screenshots/` (1440 × 960 at 1.5×, the 3:2 ratio Devpost's gallery uses). Upload in this order; the first image is the project thumbnail.
 
-1. **Welcome screen:** "What should you put on the menu next?" with the two demo shop cards.
-2. **Picks at 6 Jul 2024:** the Pretend bar set to 6 Jul 2024, card #1 Dubai chocolate · Arriving now, with its chart and "Kitchen check: SoCLaaS".
-3. **Should you do it? Go:** after typing 45 a week and costs 0.60 / 0.35 / 0.45 / 0.15, showing "$1,150 to $1,807 profit over a typical run" and the stock plan.
-4. **Launch offer + Content plan:** "First 50 free on launch day" and the dated shot list (Announce · The cut).
-5. **The reveal:** Korean yogurt ice cream at 6 Jul 2024 after **Reveal what happened next** ("58 weeks after the date you picked"), with the shaded chart.
-6. **Architecture:** `docs/architecture.png` (already made).
+1. `docs/architecture.png`: how it works (the model reads and judges, code counts and forecasts).
+2. `02-picks-6-jul-2024.png`: rewound to 6 Jul 2024, Dubai chocolate · Arriving now as the café's top pick, with "Kitchen check: SoCLaaS".
+3. `03-should-you-do-it.png`: **Go**, with 45 a week and costs 0.60 / 0.35 / 0.45 / 0.15: "$1,150 to $1,807 profit over a typical run", stop bulk ordering by 10 Aug 2024.
+4. `04-launch-offer-content-plan.png`: "First 50 free on launch day", priced on the café's own costs, and the dated content plan.
+5. `05-reveal-korean-yogurt-ice-cream.png`: the reveal: Singapore took off 58 weeks after the date picked, 19 weeks later than the window.
+6. `06-trend-radar-compare.png`: three foods side by side on the trend radar.
+7. `07-launch-board.png`: the Watch → Plan → Launched board.
+8. `01-overview.png`: the overview a first-time visitor sees.
 
-Put the architecture diagram or screenshot 2 first, since the first image is the project thumbnail.
+Captions to paste under each image are the descriptions after the colons.

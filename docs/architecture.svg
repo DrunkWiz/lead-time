@@ -52,7 +52,7 @@
   <text x="450" y="358" class="t">• Ranking, weekly "what changed" feed</text>
   <text x="450" y="390" class="s">Every function takes as_of. A test corrupts all data</text>
   <text x="450" y="408" class="s">after as_of and checks nothing changes (no lookahead).</text>
-  <text x="450" y="436" class="s">93 tests · no network · no keys</text>
+  <text x="450" y="436" class="s">94 tests · no network · no keys</text>
 
   <!-- Runtime: model box -->
   <rect x="430" y="484" width="410" height="200" rx="14" fill="#FBF0DC" stroke="#D98E1C" stroke-width="1.5"/>
