@@ -67,6 +67,7 @@ export default function Detail({ id, profile, asOf }) {
   const [concept, setConcept] = useState(null)
   const [error, setError] = useState(null)
   const [planError, setPlanError] = useState(null)
+  const [attempt, setAttempt] = useState(0)
   const board = useBoard()
 
   useEffect(() => {
@@ -76,7 +77,7 @@ export default function Detail({ id, profile, asOf }) {
     api.launch(id, profile, asOf).then((p) => live && setPlan(p)).catch((e) => live && setPlanError(e.message))
     window.scrollTo(0, 0)
     return () => { live = false }
-  }, [id, profile, asOf])
+  }, [id, profile, asOf, attempt])
 
   // #/c/<id>#track jumps to the sales tracker once the page has rendered
   useEffect(() => {
@@ -85,7 +86,7 @@ export default function Detail({ id, profile, asOf }) {
     }
   }, [concept])
 
-  if (error) return <div><a className="btn ghost back" href="#/">← All picks</a><div className="error" role="alert">{error}</div></div>
+  if (error) return <div><a className="btn ghost back" href="#/">← Overview</a><div className="error" role="alert">{error}<button className="btn" onClick={() => setAttempt(a => a + 1)}>Try again</button></div></div>
   if (!concept) return <div><a className="btn ghost back" href="#/">← All picks</a><div className="skeleton" /></div>
 
   const origin = concept.origin || Object.keys(concept.series.regions).find((g) => g !== 'SG')
@@ -104,10 +105,11 @@ export default function Detail({ id, profile, asOf }) {
         <p className="desc">{concept.description}</p>
         <div style={{ marginTop: 12 }}><StageButtons id={id} asOf={asOf} /></div>
       </header>
+      <nav className="detail-jumps" aria-label="Opportunity sections">{[['evidence', 'The evidence'], ['launch-plan', 'Kitchen plan'], ['costs', 'Pricing'], ['track', 'Sales tracker']].filter(([section]) => !['launch-plan', 'costs'].includes(section) || (fit && (section !== 'costs' || fit.verdict !== 'skip'))).map(([section, label]) => <a key={section} href={'#/c/' + id} onClick={e => { e.preventDefault(); document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' }) }}>{label}</a>)}</nav>
 
       <DecisionCard key={`d-${id}`} id={id} profile={profile} asOf={asOf} />
 
-      <section className="block">
+      <section className="block" id="evidence">
         <h3>The evidence</h3>
         <p>{concept.why}</p>
         <p className="muted" style={{ marginTop: 6 }}>{concept.evidence}</p>
@@ -131,12 +133,12 @@ export default function Detail({ id, profile, asOf }) {
         {plan
           ? <p className="when-big">{plan.when.text}</p>
           : planError
-            ? <div className="error" role="alert">{planError}</div>
+            ? <div className="error" role="alert">{planError}<button className="btn" onClick={() => setAttempt(a => a + 1)}>Retry plan</button></div>
             : <Waiting text="Working out your plan…" />}
       </section>
 
       {plan && fit && (
-        <section className="block">
+        <section className="block" id="launch-plan">
           <h3>What to make in your kitchen</h3>
           <p>
             {fit.verdict === 'make' && <b>You can make the original. </b>}

@@ -18,7 +18,7 @@ export default function CostCalculator({ id, ingredients, priceBand }) {
   const s = suggestPrice(total, priceBand)
 
   return (
-    <section className="block">
+    <section className="block" id="costs">
       <h3>What to charge</h3>
       <p className="small muted">Type roughly what each part costs you per portion. We'll suggest a price.</p>
       <div className="cost-grid">

@@ -1,6 +1,7 @@
 import Status from './Status.jsx'
 import Sparkline from './Sparkline.jsx'
 import StageButtons from './StageButtons.jsx'
+import FoodArt from './FoodArt.jsx'
 import { PROVIDER_LABEL } from '../format.js'
 
 export default function Card({ card, rank, asOf }) {
@@ -8,6 +9,7 @@ export default function Card({ card, rank, asOf }) {
   return (
     <article className="card">
       <a className="card-link" href={`#/c/${card.id}`}>
+        <FoodArt id={card.id} category={card.category} />
         <div className="card-head">
           <div>
             <h2>{card.name}</h2>

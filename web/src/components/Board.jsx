@@ -1,9 +1,10 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { api } from '../api.js'
 import { fmtDate, fmtDayMonth } from '../format.js'
 import { money } from '../pricing.js'
-import { boardStore, costTotal, idsAt, todayIso, useBoard } from '../store.js'
+import { costTotal, idsAt, useBoard } from '../store.js'
 import Status from './Status.jsx'
+import BoardPipeline from './BoardPipeline.jsx'
 
 function salesSummary(launch) {
   const logs = launch?.logs || []
@@ -12,7 +13,7 @@ function salesSummary(launch) {
   const prev = logs[logs.length - 2]
   let trend = null
   if (last && prev) trend = last.sold > prev.sold ? 'up' : last.sold < prev.sold ? 'down' : 'flat'
-  return { total, last, trend, weeks: logs.length, revenue: launch?.price ? total * launch.price : null }
+  return { total, last, trend, weeks: logs.length, revenue: launch?.price != null ? total * launch.price : null }
 }
 
 function exportCsv(board, names) {
@@ -35,7 +36,7 @@ function ReviewBadge({ id, asOf, entry }) {
     api.review(id, asOf, entry.launch?.logs || [], entry.launch?.price, costTotal(entry))
       .then((d) => live && setR(d.review)).catch(() => {})
     return () => { live = false }
-  }, [id, asOf, logsKey])   // eslint-disable-line react-hooks/exhaustive-deps
+  }, [id, asOf, logsKey, entry.launch?.price, JSON.stringify(entry.costs)])   // eslint-disable-line react-hooks/exhaustive-deps
   if (!r) return null
   return (
     <div className={`review compact v-${r.verdict}`}>
@@ -52,31 +53,34 @@ export default function Board({ profile, asOf }) {
   const [concepts, setConcepts] = useState(null)
   const [plan, setPlan] = useState(null)
   const [error, setError] = useState(null)
+  const [attempt, setAttempt] = useState(0)
   const plannedKey = [...planned].sort().join(',')
 
   useEffect(() => {
     let live = true
+    setError(null)
     api.concepts(asOf).then((d) => live && setConcepts(d.concepts)).catch((e) => live && setError(e.message))
     return () => { live = false }
-  }, [asOf])
+  }, [asOf, attempt])
 
   useEffect(() => {
     let live = true
-    setPlan(null)
+    setPlan(null); setError(null)
     if (!plannedKey) return undefined
     api.plan(plannedKey.split(','), profile, asOf).then((d) => live && setPlan(d)).catch((e) => live && setError(e.message))
     return () => { live = false }
-  }, [plannedKey, profile, asOf])
+  }, [plannedKey, profile, asOf, attempt])
 
-  const byId = useMemo(() => Object.fromEntries((concepts || []).map((c) => [c.id, c])), [concepts])
   const names = Object.fromEntries((concepts || []).map((c) => [c.id, c.name]))
   const empty = !watching.length && !planned.length && !launched.length
 
   return (
     <div>
-      <h1>My board</h1>
-      <p className="muted" style={{ marginTop: 6 }}>Watch foods, plan the ones you'll make, then track how they sell. Saved on this device.</p>
-      {error && <div className="error" role="alert" style={{ marginTop: 16 }}>{error}</div>}
+      <span className="eyebrow">FROM IDEA TO YOUR FIRST ORDER</span>
+      <h1 style={{ marginTop: 10 }}>Your launch board</h1>
+      <p className="muted" style={{ marginTop: 8 }}>A home for your next menu moves. Watch, plan, launch, then learn.</p>
+      <BoardPipeline board={board} concepts={concepts} asOf={asOf} profile={profile}/>
+      {error && <div className="error" role="alert" style={{ marginTop: 16 }}>{error}<button className="btn" onClick={() => setAttempt(a => a + 1)}>Retry board</button></div>}
 
       {empty && (
         <div className="empty" style={{ marginTop: 20 }}>
@@ -87,7 +91,7 @@ export default function Board({ profile, asOf }) {
       {planned.length > 0 && (
         <section className="section">
           <h2>Planned</h2>
-          {!plan && <div className="skeleton" style={{ height: 120, marginTop: 12 }} />}
+          {!plan && !error && <div className="skeleton" style={{ height: 120, marginTop: 12 }} />}
           {plan && (
             <>
               <ol className="timeline">
@@ -144,7 +148,7 @@ export default function Board({ profile, asOf }) {
               const b = board[id], s = salesSummary(b.launch), c = costTotal(b)
               sold += s.total
               revenue += s.revenue || 0
-              if (b.launch?.price && c != null) profit += s.total * (b.launch.price - c)
+              if (b.launch?.price != null && c != null) profit += s.total * (b.launch.price - c)
               else profitKnown = false
             })
             return sold > 0 && (
@@ -183,29 +187,7 @@ export default function Board({ profile, asOf }) {
         </section>
       )}
 
-      {watching.length > 0 && (
-        <section className="section">
-          <h2>Watching</h2>
-          <p className="muted small" style={{ marginTop: 4 }}>Changes to these are flagged in <a href="#/week">This week</a>.</p>
-          <ul className="list-quiet" style={{ marginTop: 8 }}>
-            {watching.map((id) => {
-              const c = byId[id]
-              return (
-                <li key={id} style={{ alignItems: 'center' }}>
-                  <a href={`#/c/${id}`} style={{ display: 'grid', gap: 2 }}>
-                    <b>{c?.name || id}</b>
-                    {c && <span className="small muted">{c.why}</span>}
-                  </a>
-                  <div style={{ display: 'flex', gap: 6, alignItems: 'center', flexShrink: 0 }}>
-                    {c && <Status status={c.status} label={c.status_label} />}
-                    <button type="button" className="btn ghost" onClick={() => boardStore.setStage(id, 'planned', asOf || todayIso())} aria-label={`Plan ${c?.name || id}`}>Plan →</button>
-                  </div>
-                </li>
-              )
-            })}
-          </ul>
-        </section>
-      )}
+
     </div>
   )
 }

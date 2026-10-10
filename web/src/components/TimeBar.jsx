@@ -15,7 +15,7 @@ export default function TimeBar({ meta, asOf, onChange, backtest }) {
         <input
           id="asof" type="date" className="num"
           min={meta?.earliest_as_of || undefined} max={meta?.snapshot_date || undefined}
-          value={asOf || ''} onChange={(e) => onChange(e.target.value || null)}
+          value={asOf || ''} onChange={(e) => { if (e.target.validity.valid) onChange(e.target.value || null) }}
         />
         {on && <button className="btn" type="button" onClick={() => onChange(null)}>Back to today</button>}
       </div>

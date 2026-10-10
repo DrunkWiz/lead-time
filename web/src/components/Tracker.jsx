@@ -83,7 +83,7 @@ export default function Tracker({ id, name, asOf, sgWeeks, sgValues, suggestedPr
         <p className="small muted">Log it here and track weekly sales. Saved on this device only.</p>
         <form className="inline-form" onSubmit={(e) => {
           e.preventDefault()
-          boardStore.setLaunch(id, { launched_on: launchedOn, price: parseFloat(price) || suggestedPrice || null })
+          boardStore.setLaunch(id, { launched_on: launchedOn, price: price !== '' ? Number(price) : suggestedPrice ?? null })
         }}>
           <label>Launch date<input type="date" value={launchedOn} onChange={(e) => setLaunchedOn(e.target.value)} required /></label>
           <label>Price ($)<input type="number" inputMode="decimal" min="0" step="0.1" value={price} onChange={(e) => setPrice(e.target.value)} placeholder={suggestedPrice ? suggestedPrice.toFixed(2) : 'e.g. 6.50'} /></label>
@@ -125,9 +125,10 @@ export default function Tracker({ id, name, asOf, sgWeeks, sgValues, suggestedPr
         </ul>
       )}
       <button type="button" className="btn ghost" style={{ marginTop: 8 }}
-        onClick={() => { if (window.confirm(`Stop tracking ${name}? Logged sales will be removed.`)) boardStore.setStage(id, null) }}>
-        Stop tracking
+        onClick={() => boardStore.setStage(id, entry.stage === 'launched' ? null : 'launched', today)}>
+        {entry.stage === 'launched' ? 'Archive launch' : 'Restore to launched board'}
       </button>
+      <p className="small muted">{entry.stage === 'launched' ? 'Archiving removes this food from the board and keeps your sales history.' : 'This launch is archived. Your sales history is preserved.'}</p>
     </section>
   )
 }

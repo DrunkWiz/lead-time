@@ -4,7 +4,7 @@
 
 ForgeHacks Online 2026 · AI + Business track
 
-**Live demo:** https://lead-time-cjnn.onrender.com (free tier: the first visit after a quiet spell takes up to a minute to wake up). Tap **Dessert café**, then the **6 Jul 2024** chip under "Pretend it's…".
+**Live demo:** https://lead-time-cjnn.onrender.com (free tier: the first visit after a quiet spell takes up to a minute to wake up). The overview opens immediately with a clearly labelled example dessert café. Choose **Personalise my picks** to configure your kitchen, or **Explore history** to rewind the evidence.
 
 A dessert takes off in Seoul or Dubai and reaches Singapore some weeks later. By the time a small café hears about it, every other shop already has it on the menu. Lead Time measures that gap from five years of search history, applies it to what's rising abroad right now, and checks each candidate against your menu and equipment. You get three foods to try. Each one comes with its evidence, a launch date, the version your kitchen can make, and three ways to announce it.
 
@@ -12,15 +12,17 @@ A dessert takes off in Seoul or Dubai and reaches Singapore some weeks later. By
 
 | Screen | What it's for |
 |---|---|
-| **Picks** | Up to three foods heading for Singapore that this kitchen can make, each with the evidence, the version to make, and when to launch. |
-| **This week** | A weekly feed of what moved: new takeoffs abroad, foods arriving here, foods peaking. Foods on your board are tagged; one tap copies a plain-text brief for staff. |
-| **Explore** | Every food we track, filterable by status and type, searchable. |
-| **My board** | Watch → Plan → Launched. Planned foods get a launch timeline, a combined shopping list and the kit you're missing. Launched foods track weekly sales (exportable as CSV). |
+| **Overview** | Up to three foods heading for Singapore that this kitchen can make, each with the evidence, the version to make, and when to launch. |
+| **Weekly briefing** | A weekly feed of what moved: new takeoffs abroad, foods arriving here, foods peaking. Foods on your board are tagged; one tap copies a plain-text brief for staff. |
+| **Trend radar** | Search foods and origins, filter by status, category or saved items, sort by opportunity or name, and compare up to three foods side by side. |
+| **Launch board** | A three-column Watch → Plan → Launched pipeline with a twelve-food planning limit. Planned foods get a launch timeline, a combined shopping list and the kit you're missing. Launched foods track weekly sales (exportable as CSV). |
 | **Food page** | Opens with **Should you do it?**: Go / Go but late / Wait / Skip, with the reasons (timing, kitchen, overlap with your current menu, how long trends last here, your margin), a projected profit range from your own price and weekly-sales guess, and a stock plan (bulk-order until a date, then week by week). Below: evidence chart, launch plan (method outline, swaps, three video hooks, caption, offer), price helper, and the sales tracker. |
 | **Launch offer** | Six offers (first N free, % off launch week, second half price, loyalty card, limited daily drop, bundle with something already on your menu), each priced against your own cost and price: what it costs, what you make on each, how much more you'd need to sell to come out even, and whether your kitchen can keep up. One is suggested for the moment you're in (early: buy attention; late: give a reason to pick you; waiting: protect margin), and offers you couldn't make back are flagged. |
 | **Content plan** | A dated posting schedule around launch day (tease, announce, launch, reactions, follow-up), with a shot list for each post. Formats are picked from what the food is: things with fillings get the cut, things that crack get the crunch, drinks get the pour. The plan follows the offer you choose (a giveaway adds a line video, a daily drop adds a sold-out post). Tick posts off as you go, or copy the whole shot list for staff. |
 | **After launch** | Log weekly sales and get a **keep / push / rethink / wind down** call that reads your sales against Singapore's curve: falling sales while searches are still up means the item is the problem, not the trend. The board totals sales, revenue and profit across everything you've launched. |
 | **Pretend it's…** | Rewind every screen above to any past date, using only data visible then, then reveal what happened. |
+
+The responsive workspace includes light/dark appearance, a snapshot date on every screen, and global historical controls. The board supports JSON backup and validated restoration of missing foods; existing entries and the kitchen profile are not overwritten. Archiving a launch preserves its sales, costs and completed content posts. Board changes synchronise across open tabs.
 
 Board, menu, costs and sales stay in the browser (`localStorage`); there are no accounts. Sales are sent to the API only to compute a review and are never stored.
 
@@ -270,3 +272,22 @@ docs/DECISIONS.md    every tuned constant and why
 ## Licence
 
 MIT
+
+## Browser regression tests
+
+After building the frontend, run the Python production server on port 8766 with
+`LT_PROVIDER_CHAIN=offline` and `PORT=8766`, then:
+
+```sh
+cd web
+npm ci
+npx playwright install chromium
+npm run test:e2e
+```
+
+The suite uses the real local API and committed trend snapshots. It covers immediate
+preview, search/filter/compare, launch and sales persistence, archive/restore, backup
+validation and restoration, cross-tab updates, planning limits, historical mode,
+failed-request recovery, appearance persistence, and phone/tablet/desktop layouts.
+Set `LEADTIME_TEST_URL` to use another running server and optionally
+`PLAYWRIGHT_CHROMIUM_EXECUTABLE` to use an existing Chromium installation.
